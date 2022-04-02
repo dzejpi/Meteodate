@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/visual/ui/main_menu/menu_btn_normal.png" type="Texture" id=1]
 [ext_resource path="res://assets/visual/ui/main_menu/menu_btn_pressed.png" type="Texture" id=2]
@@ -11,10 +11,32 @@
 [ext_resource path="res://scripts/CreditsButton.gd" type="Script" id=9]
 [ext_resource path="res://scripts/MusicButton.gd" type="Script" id=10]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/fonts/kenney_fontpackage/fonts/kenney_future_narrow.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 12 )
 
 [node name="MainMenuScene" type="Node2D"]
 
 [node name="MenuButtons" type="Node2D" parent="."]
+position = Vector2( 128, 128 )
 
 [node name="NewGameButton" type="TextureButton" parent="MenuButtons"]
 margin_right = 256.0
@@ -32,6 +54,7 @@ __meta__ = {
 [node name="NewGameLabel" type="Label" parent="MenuButtons/NewGameButton"]
 margin_right = 256.0
 margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
 text = "New Game"
 align = 1
 valign = 1
@@ -57,9 +80,13 @@ __meta__ = {
 [node name="MusicLabel" type="Label" parent="MenuButtons/MusicButton"]
 margin_right = 256.0
 margin_bottom = 64.0
+custom_fonts/font = SubResource( 2 )
 text = "Music: on"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SoundButton" type="TextureButton" parent="MenuButtons"]
 margin_top = 192.0
@@ -79,6 +106,7 @@ __meta__ = {
 [node name="SoundLabel" type="Label" parent="MenuButtons/SoundButton"]
 margin_right = 256.0
 margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
 text = "Sound: on"
 align = 1
 valign = 1
@@ -100,9 +128,13 @@ __meta__ = {
 [node name="CreditsLabel" type="Label" parent="MenuButtons/CreditsButton"]
 margin_right = 256.0
 margin_bottom = 64.0
+custom_fonts/font = SubResource( 4 )
 text = "Credits"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="QuitGameButton" type="TextureButton" parent="MenuButtons"]
 margin_top = 384.0
@@ -121,6 +153,7 @@ __meta__ = {
 [node name="QuitGameLabel" type="Label" parent="MenuButtons/QuitGameButton"]
 margin_right = 256.0
 margin_bottom = 64.0
+custom_fonts/font = SubResource( 5 )
 text = "Quit Game"
 align = 1
 valign = 1
