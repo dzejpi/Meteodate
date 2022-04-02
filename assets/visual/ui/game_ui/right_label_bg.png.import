@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/right_label_bg.png-602bcb210e9240381033b0ac66efd11f.stex"
+path="res://.import/right_label_bg.png-8bbde8fbe1d5c392da82a89976fecf05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/ui/game_elements/right_label_bg.png"
-dest_files=[ "res://.import/right_label_bg.png-602bcb210e9240381033b0ac66efd11f.stex" ]
+source_file="res://assets/visual/ui/game_ui/right_label_bg.png"
+dest_files=[ "res://.import/right_label_bg.png-8bbde8fbe1d5c392da82a89976fecf05.stex" ]
 
 [params]
 

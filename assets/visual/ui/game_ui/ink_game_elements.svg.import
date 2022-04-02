@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/left_label_bg.png-72ebd9960de257feb3bbb36fd30e9ea4.stex"
+path="res://.import/ink_game_elements.svg-1f3de8f0b1f52bf92ffe53637b2fb903.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/visual/ui/game_elements/left_label_bg.png"
-dest_files=[ "res://.import/left_label_bg.png-72ebd9960de257feb3bbb36fd30e9ea4.stex" ]
+source_file="res://assets/visual/ui/game_ui/ink_game_elements.svg"
+dest_files=[ "res://.import/ink_game_elements.svg-1f3de8f0b1f52bf92ffe53637b2fb903.stex" ]
 
 [params]
 
