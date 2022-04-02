@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
+[ext_resource path="res://font_presets/font_small.tres" type="DynamicFont" id=3]
 
 [node name="GameSceneOne" type="Node2D"]
 
@@ -14,3 +15,56 @@ visible = false
 position = Vector2( 512, 192 )
 
 [node name="TransitionOverlay" parent="." instance=ExtResource( 2 )]
+
+[node name="GameUiLabels" type="Node2D" parent="."]
+position = Vector2( 32, 32 )
+
+[node name="LeftLabels" type="Node2D" parent="GameUiLabels"]
+
+[node name="DistanceLabel" type="Label" parent="GameUiLabels/LeftLabels"]
+margin_right = 200.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 3 )
+text = "Distance: 30000 km"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedLabel" type="Label" parent="GameUiLabels/LeftLabels"]
+margin_top = 24.0
+margin_right = 200.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 3 )
+text = "Speed: 11 km/s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftLabelsLg" type="Sprite" parent="GameUiLabels/LeftLabels"]
+
+[node name="RightLabels" type="Node2D" parent="GameUiLabels"]
+
+[node name="TotalFundsLabel" type="Label" parent="GameUiLabels/RightLabels"]
+margin_left = 1016.0
+margin_right = 1216.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 3 )
+text = "Total Funds: 230k $"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FundsSpeedLabel" type="Label" parent="GameUiLabels/RightLabels"]
+margin_left = 1016.0
+margin_top = 24.0
+margin_right = 1216.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 3 )
+text = "Gains: 20k $/s"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightLabelsLg" type="Sprite" parent="GameUiLabels/RightLabels"]
