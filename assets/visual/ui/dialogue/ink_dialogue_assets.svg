@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.6060766"
-     inkscape:cx="132.61674"
-     inkscape:cy="79.929091"
+     inkscape:zoom="4.000435"
+     inkscape:cx="131.12993"
+     inkscape:cy="91.448828"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
@@ -56,19 +56,20 @@
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
     <rect
-       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
+       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
        id="rect839"
-       width="303.74167"
-       height="49.741673"
-       x="5.8208318"
-       y="5.8208318"
-       inkscape:export-xdpi="98"
-       inkscape:export-ydpi="98" />
+       width="304.79999"
+       height="50.800003"
+       x="5.291667"
+       y="5.291667"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Character BG">
+     inkscape:label="Character BG"
+     style="display:inline">
     <path
        style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
        d="M 3.1749236,20.108332 H 53.974924 L 37.04159,3.1749984 H 20.108257 Z"
@@ -77,27 +78,27 @@
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
     <path
-       style="fill:#005784;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
-       d="M 3.1749236,20.108331 H 20.108334 V 3.1749984 h -7.7e-5 z"
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       d="M 2.6457569,40.745844 H 19.579167 V 23.812507 h -7.7e-5 z"
        id="path842-0"
        sodipodi:nodetypes="ccccc"
-       inkscape:export-xdpi="98"
-       inkscape:export-ydpi="98" />
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <path
-       style="fill:#005784;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
-       d="M 37.041667,20.108318 H 53.974924 L 37.04159,3.1749889 h 7.7e-5 z"
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       d="M 36.5125,40.745831 H 53.445757 L 36.512423,23.812498 h 7.7e-5 z"
        id="path842-7"
        sodipodi:nodetypes="ccccc"
-       inkscape:export-xdpi="98"
-       inkscape:export-ydpi="98" />
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <rect
        style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
        id="rect874"
        width="16.933334"
        height="16.933334"
-       x="20.108334"
-       y="3.1749837"
-       inkscape:export-xdpi="98"
-       inkscape:export-ydpi="98" />
+       x="19.579166"
+       y="23.812485"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>

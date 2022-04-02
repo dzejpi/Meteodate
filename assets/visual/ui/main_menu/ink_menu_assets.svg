@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2914878"
-     inkscape:cx="344.69939"
-     inkscape:cy="205.18507"
+     inkscape:zoom="0.92875474"
+     inkscape:cx="373.02324"
+     inkscape:cy="327.68988"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -39,7 +39,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -48,25 +48,46 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#9d9d9d;stroke:#656d71;stroke-width:1.05833335;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:butt"
-       d="M 13.890586,13.890627 H 80.301041 L 71.999735,29.501041 H 13.890586 Z"
+       style="fill:#9d9d9d;stroke:#656d71;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 13.758334,13.758332 H 80.168789 L 71.867483,29.368746 H 13.758334 Z"
        id="path883"
        sodipodi:nodetypes="ccccc"
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
     <path
-       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833335;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 13.890627,40.348961 h 66.410456 l -8.30131,15.610414 H 13.890627 Z"
+       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 13.758375,40.216666 H 80.168831 L 71.867521,55.82708 H 13.758375 Z"
        id="path883-7"
        sodipodi:nodetypes="ccccc"
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
     <path
-       style="fill:#005784;stroke:#005784;stroke-width:1.05833335;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 13.890627,66.807294 h 66.410452 l -8.30131,15.610414 H 13.890627 Z"
+       style="fill:#005784;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 13.758375,66.674999 h 66.410452 l -8.30131,15.610414 H 13.758375 Z"
        id="path883-7-5"
        sodipodi:nodetypes="ccccc"
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
+    <path
+       style="fill:#9d9d9d;stroke:none;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 92.604164,13.229167 H 160.3375 l -8.46667,16.933335 H 92.604164 Z"
+       id="path883-1"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 92.604169,39.687502 H 160.3375 l -8.46667,16.933335 H 92.604169 Z"
+       id="path883-7-4"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 92.604169,66.145836 H 160.3375 L 151.87083,83.07917 H 92.604169 Z"
+       id="path883-7-5-2"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>
