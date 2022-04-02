@@ -12,6 +12,7 @@ var laser_texture = load("res://assets/visual/game/defence_systems/defence_laser
 var sonic_waves_texture = load("res://assets/visual/game/defence_systems/defence_sonic_waves.png") 
 
 onready var defensive_sprite = $DefensiveSprite
+onready var warning_label = $WarningLabel
 onready var root_node = $"../../"
 
 
@@ -31,6 +32,11 @@ func _process(delta):
 		
 	
 	if placing_defence_system:
+		if possible_to_place:
+			warning_label.visible = false
+		else:
+			warning_label.visible = true
+		
 		match selected_defence_system:
 			1:
 				defensive_sprite.texture = rocket_texture
@@ -42,6 +48,8 @@ func _process(delta):
 				defensive_sprite.texture = chute_texture
 	else:
 		defensive_sprite.texture = null
+		
+
 		
 	if Input.is_action_just_pressed("confirm_selection"):
 		if possible_to_place:
