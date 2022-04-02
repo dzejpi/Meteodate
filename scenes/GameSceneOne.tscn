@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font_presets/font_small.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/visual/ui/game_elements/left_label_bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/ui/game_elements/right_label_bg.png" type="Texture" id=5]
 
 [node name="GameSceneOne" type="Node2D"]
 
@@ -21,11 +23,17 @@ position = Vector2( 32, 32 )
 
 [node name="LeftLabels" type="Node2D" parent="GameUiLabels"]
 
+[node name="LeftLabelsLg" type="Sprite" parent="GameUiLabels/LeftLabels"]
+position = Vector2( -16, -12 )
+texture = ExtResource( 4 )
+centered = false
+
 [node name="DistanceLabel" type="Label" parent="GameUiLabels/LeftLabels"]
 margin_right = 200.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 3 )
 text = "Distance: 30000 km"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,13 +44,16 @@ margin_right = 200.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 3 )
 text = "Speed: 11 km/s"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LeftLabelsLg" type="Sprite" parent="GameUiLabels/LeftLabels"]
-
 [node name="RightLabels" type="Node2D" parent="GameUiLabels"]
+
+[node name="RightLabelsLg" type="Sprite" parent="GameUiLabels/RightLabels"]
+position = Vector2( 1101, 20 )
+texture = ExtResource( 5 )
 
 [node name="TotalFundsLabel" type="Label" parent="GameUiLabels/RightLabels"]
 margin_left = 1016.0
@@ -66,5 +77,3 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="RightLabelsLg" type="Sprite" parent="GameUiLabels/RightLabels"]
