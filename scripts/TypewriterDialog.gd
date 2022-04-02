@@ -7,13 +7,13 @@ var dialog_timeout = 0
 var dialog_timeout_time = 1
 var dialog_switch_timeout = 0
 var dialog_switch_timeout_time = 4
-var dialog_text_array = ["This is the first text.", "This is the second one.", "And the last, third one."]
+var dialog_text_array = [""]
 
 var displayed_dialog_array_number = 0
 var currently_displayed_character = 0
 var current_dialog = ""
 
-var processing_dialog = true
+var processing_dialog = false
 var text_fully_displayed = false
 
 onready var text_label = $TextBgSprite/TextLabel
