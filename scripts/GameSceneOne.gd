@@ -24,6 +24,7 @@ var count_countdown = 0
 
 onready var earth_node = $GameNode/Earth
 onready var meteorite_node = $GameNode/Meteorite
+onready var game_loop_node = $GameLoopNode
 
 
 func _ready():
@@ -51,3 +52,11 @@ func process_speeds_and_distances(delta):
 		
 		label_speed = int((initial_distance - current_earth_meteorite_distance) * 42)
 		initial_distance = current_earth_meteorite_distance
+
+
+func trigger_dialog(new_dialog_number):
+	game_loop_node.dialog_number = new_dialog_number
+
+
+func trigger_game_event(new_event_number):
+	game_loop_node.event_number = new_event_number

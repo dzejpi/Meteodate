@@ -24,7 +24,3 @@ func get_dialog(dialog_number):
 			dialog_text = ["Third dialog"]
 
 	return dialog_text
-	
-
-func display_dialog(dialog_number):
-	pass
