@@ -6,6 +6,7 @@ var current_earth_meteorite_distance = 1000
 var converted_earth_meteorite_distance = 20
 var previous_earth_meteorite_distance = 20
 var initial_distance = 0
+var days_survived = 0
 
 # One pixel is roughly 42 kilometres
 # Width of the Earth / 2 / 150 px
