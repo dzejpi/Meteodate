@@ -12,5 +12,5 @@ func _ready():
 
 
 func _process(delta):
-	total_funds_label.text = "Total funds: " + String(root_node.label_total_funds) + " G"
+	total_funds_label.text = "Total funds: " + String(int(root_node.label_total_funds)) + " G"
 	funds_speed_label.text = "Gains: " + String(root_node.label_funding_gains) + " G/S"

@@ -39,6 +39,7 @@ func _ready():
 
 func _process(delta):
 	process_speeds_and_distances(delta)
+	process_funds(delta)
 	process_day_count(delta)
 
 
@@ -64,6 +65,10 @@ func process_day_count(delta):
 	else:
 		days_countdown = 0
 		days_survived += 1
+
+
+func process_funds(delta):
+	label_total_funds += label_funding_gains * delta
 
 
 func trigger_dialog(new_dialog_number):
