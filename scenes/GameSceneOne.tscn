@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -10,8 +10,10 @@
 [ext_resource path="res://assets/visual/game/meteorite/meteorite_burn_shape.png" type="Texture" id=8]
 [ext_resource path="res://assets/visual/game/meteorite/meteorite_shape.png" type="Texture" id=9]
 [ext_resource path="res://assets/visual/game/meteorite/meteorite_burn_tail.png" type="Texture" id=10]
+[ext_resource path="res://scripts/GameSceneOne.gd" type="Script" id=11]
 
 [node name="GameSceneOne" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -94,7 +96,7 @@ margin_left = 1016.0
 margin_right = 1216.0
 margin_bottom = 18.0
 custom_fonts/font = ExtResource( 3 )
-text = "Total Funds: 230k $"
+text = "Total Funds: 230 G"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -106,7 +108,7 @@ margin_top = 24.0
 margin_right = 1216.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 3 )
-text = "Gains: 20k $/s"
+text = "Gains: 20 G/s"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
