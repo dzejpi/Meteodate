@@ -8,6 +8,7 @@ var previous_earth_meteorite_distance = 20
 var initial_distance = 0
 
 # One pixel is roughly 42 kilometres
+# Width of the Earth / 2 / 150 px
 var pixel_to_km = 42
 
 var label_distance = 30000
@@ -36,6 +37,7 @@ func _process(delta):
 	meteorite_node.meteorite_speed = meteorite_speed
 	
 	current_earth_meteorite_distance = (earth_node.position.x - meteorite_node.position.x)
+	meteorite_node.distance_left = current_earth_meteorite_distance
 	converted_earth_meteorite_distance = int(current_earth_meteorite_distance * pixel_to_km)
 	
 	if count_countdown < 1:
