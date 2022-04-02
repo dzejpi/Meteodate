@@ -7,6 +7,7 @@ var converted_earth_meteorite_distance = 20
 var previous_earth_meteorite_distance = 20
 var initial_distance = 0
 var days_survived = 0
+var days_countdown = 0
 
 # One pixel is roughly 42 kilometres
 # Width of the Earth / 2 / 150 px
@@ -26,6 +27,7 @@ var count_countdown = 0
 onready var earth_node = $GameNode/Earth
 onready var meteorite_node = $GameNode/Meteorite
 onready var game_loop_node = $GameLoopNode
+onready var game_over_node = $GameOver/GameOverScene
 
 
 func _ready():
@@ -37,6 +39,7 @@ func _ready():
 
 func _process(delta):
 	process_speeds_and_distances(delta)
+	process_day_count(delta)
 
 
 func process_speeds_and_distances(delta):
@@ -55,9 +58,22 @@ func process_speeds_and_distances(delta):
 		initial_distance = current_earth_meteorite_distance
 
 
+func process_day_count(delta):
+	if days_countdown < 10:
+		days_countdown += (1 * delta)
+	else:
+		days_countdown = 0
+		days_survived += 1
+
+
 func trigger_dialog(new_dialog_number):
 	game_loop_node.dialog_number = new_dialog_number
 
 
 func trigger_game_event(new_event_number):
 	game_loop_node.event_number = new_event_number
+
+
+func end_the_game():
+	game_over_node.game_over_triggered = true
+	game_over_node.days_survived = days_survived

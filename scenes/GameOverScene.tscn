@@ -1,0 +1,109 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://assets/visual/ui/main_menu/menu_btn_disabled.png" type="Texture" id=1]
+[ext_resource path="res://assets/visual/ui/main_menu/menu_btn_focused.png" type="Texture" id=2]
+[ext_resource path="res://assets/visual/ui/main_menu/menu_btn_normal.png" type="Texture" id=3]
+[ext_resource path="res://assets/visual/ui/main_menu/menu_btn_hover.png" type="Texture" id=4]
+[ext_resource path="res://assets/visual/ui/main_menu/menu_btn_pressed.png" type="Texture" id=5]
+[ext_resource path="res://scripts/BackToMenuButton.gd" type="Script" id=6]
+[ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=7]
+[ext_resource path="res://font_presets/font_middle.tres" type="DynamicFont" id=8]
+[ext_resource path="res://assets/visual/game/game_main_bg.png" type="Texture" id=9]
+[ext_resource path="res://scripts/RestartGameButton.gd" type="Script" id=10]
+[ext_resource path="res://scripts/GameOverScene.gd" type="Script" id=11]
+[ext_resource path="res://font_presets/font_game_over.tres" type="DynamicFont" id=12]
+[ext_resource path="res://font_presets/font_big.tres" type="DynamicFont" id=13]
+
+[node name="GameOverScene" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BackgroundSprite" type="Sprite" parent="Background"]
+texture = ExtResource( 9 )
+centered = false
+
+[node name="GameOverButtons" type="Node2D" parent="."]
+
+[node name="BackToMenuButton" type="TextureButton" parent="GameOverButtons"]
+margin_left = 512.0
+margin_top = 592.0
+margin_right = 768.0
+margin_bottom = 656.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 2 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackToMenuLabel" type="Label" parent="GameOverButtons/BackToMenuButton"]
+margin_right = 256.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 8 )
+text = "Back To Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartGameButton" type="TextureButton" parent="GameOverButtons"]
+margin_left = 512.0
+margin_top = 496.0
+margin_right = 768.0
+margin_bottom = 560.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 1 )
+texture_focused = ExtResource( 2 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RestartGameButton" type="Label" parent="GameOverButtons/RestartGameButton"]
+margin_right = 256.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 8 )
+text = "Restart game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOverTextLabel" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 1216.0
+margin_bottom = 528.0
+custom_fonts/font = ExtResource( 12 )
+text = "GAME OVER!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DaysSurvivedLabel" type="Label" parent="."]
+margin_left = 64.0
+margin_top = 128.0
+margin_right = 1216.0
+margin_bottom = 592.0
+custom_fonts/font = ExtResource( 13 )
+text = "Days survived: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TransitionOverlay" parent="." instance=ExtResource( 7 )]
+
+[connection signal="pressed" from="GameOverButtons/BackToMenuButton" to="GameOverButtons/BackToMenuButton" method="_on_BackToMenuButton_pressed"]
+[connection signal="pressed" from="GameOverButtons/RestartGameButton" to="GameOverButtons/RestartGameButton" method="_on_RestartGameButton_pressed"]
