@@ -48,8 +48,7 @@ func _process(delta):
 				defensive_sprite.texture = chute_texture
 	else:
 		defensive_sprite.texture = null
-		
-
+		warning_label.visible = false
 		
 	if Input.is_action_just_pressed("confirm_selection"):
 		if possible_to_place:
