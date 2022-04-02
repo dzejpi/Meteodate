@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -37,6 +37,9 @@
 [ext_resource path="res://scripts/CursorNode.gd" type="Script" id=35]
 [ext_resource path="res://assets/visual/game/defence_systems/defence_rocket.png" type="Texture" id=36]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 140.0
+
 [node name="GameSceneOne" type="Node2D"]
 script = ExtResource( 11 )
 
@@ -63,6 +66,11 @@ script = ExtResource( 16 )
 
 [node name="EarthSprite" type="Sprite" parent="GameNode/Earth"]
 texture = ExtResource( 7 )
+
+[node name="EarthArea" type="Area2D" parent="GameNode/Earth"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameNode/Earth/EarthArea"]
+shape = SubResource( 1 )
 
 [node name="Meteorite" type="Node2D" parent="GameNode"]
 position = Vector2( 48, 360 )
@@ -172,6 +180,8 @@ position = Vector2( 352, -12 )
 [node name="RocketButton" type="TextureButton" parent="GameUiLabels/DefenceButtons"]
 margin_right = 40.0
 margin_bottom = 40.0
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 24 )
 texture_hover = ExtResource( 26 )
@@ -201,6 +211,8 @@ offset = Vector2( 48, 40 )
 margin_left = 128.0
 margin_right = 224.0
 margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 24 )
 texture_hover = ExtResource( 26 )
@@ -230,6 +242,8 @@ offset = Vector2( 48, 40 )
 margin_left = 256.0
 margin_right = 352.0
 margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 24 )
 texture_hover = ExtResource( 26 )
@@ -259,6 +273,8 @@ offset = Vector2( 48, 40 )
 margin_left = 384.0
 margin_right = 480.0
 margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
 texture_normal = ExtResource( 22 )
 texture_pressed = ExtResource( 24 )
 texture_hover = ExtResource( 26 )
@@ -289,6 +305,8 @@ offset = Vector2( 48, 40 )
 [node name="TypewriterDialog" parent="TypewriterDialogManager" instance=ExtResource( 19 )]
 visible = false
 
+[connection signal="mouse_entered" from="GameNode/Earth/EarthArea" to="GameNode/CursorNode" method="_on_EarthArea_mouse_entered"]
+[connection signal="mouse_exited" from="GameNode/Earth/EarthArea" to="GameNode/CursorNode" method="_on_EarthArea_mouse_exited"]
 [connection signal="pressed" from="GameUiLabels/DefenceButtons/RocketButton" to="GameUiLabels/DefenceButtons/RocketButton" method="_on_RocketButton_pressed"]
 [connection signal="pressed" from="GameUiLabels/DefenceButtons/LaserButton" to="GameUiLabels/DefenceButtons/LaserButton" method="_on_LaserButton_pressed"]
 [connection signal="pressed" from="GameUiLabels/DefenceButtons/SonicWaves" to="GameUiLabels/DefenceButtons/SonicWaves" method="_on_SonicWaves_pressed"]

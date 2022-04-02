@@ -20,6 +20,3 @@ func _process(delta):
 	if launch:
 		if !launched:
 			launched = true
-			
-	if launched:
-		transform.x = Vector2.UP

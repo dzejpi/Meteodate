@@ -24,3 +24,4 @@ func _on_RocketButton_pressed():
 		cursor_node.selected_defence_system = 1
 		cursor_node.placing_defence_system = true
 		cursor_node.price_to_be_paid = price
+	release_focus()

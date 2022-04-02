@@ -4,6 +4,7 @@ extends Node2D
 var selected_defence_system = 0
 var placing_defence_system = false
 var price_to_be_paid = 0
+var possible_to_place = false
 
 var rocket_texture = load("res://assets/visual/game/defence_systems/defence_rocket.png") 
 var chute_texture = load("res://assets/visual/game/defence_systems/defence_chute.png") 
@@ -11,6 +12,7 @@ var laser_texture = load("res://assets/visual/game/defence_systems/defence_laser
 var sonic_waves_texture = load("res://assets/visual/game/defence_systems/defence_sonic_waves.png") 
 
 onready var defensive_sprite = $DefensiveSprite
+onready var root_node = $"../../"
 
 
 func _ready():
@@ -40,3 +42,47 @@ func _process(delta):
 				defensive_sprite.texture = chute_texture
 	else:
 		defensive_sprite.texture = null
+		
+	if Input.is_action_just_pressed("confirm_selection"):
+		if possible_to_place:
+			match selected_defence_system:
+				1:
+					var new_rocket = load("res://scenes/defence_scenes/DefenceRocket.tscn")
+					var spawned_rocket = new_rocket.instance()
+					get_parent().add_child(spawned_rocket)
+					spawned_rocket.global_position = global_position
+					root_node.label_total_funds -= 20
+					placing_defence_system = false
+					selected_defence_system = 0
+				2:
+					var new_laser = load("res://scenes/defence_scenes/DefenceLaser.tscn")
+					var spawned_laser = new_laser.instance()
+					get_parent().add_child(spawned_laser)
+					spawned_laser.global_position = global_position
+					root_node.label_total_funds -= 50
+					placing_defence_system = false
+					selected_defence_system = 0
+				3:
+					var new_sonic_wave = load("res://scenes/defence_scenes/DefenceSonicWaves.tscn")
+					var spawned_sonic_wave = new_sonic_wave.instance()
+					get_parent().add_child(spawned_sonic_wave)
+					spawned_sonic_wave.global_position = global_position
+					root_node.label_total_funds -= 100
+					placing_defence_system = false
+					selected_defence_system = 0
+				4:
+					var new_chute = load("res://scenes/defence_scenes/DefenceChute.tscn")
+					var spawned_chute = new_chute.instance()
+					get_parent().add_child(spawned_chute)
+					spawned_chute.global_position = global_position
+					root_node.label_total_funds -= 200
+					placing_defence_system = false
+					selected_defence_system = 0
+
+
+func _on_EarthArea_mouse_entered():
+	possible_to_place = true
+
+
+func _on_EarthArea_mouse_exited():
+	possible_to_place = false
