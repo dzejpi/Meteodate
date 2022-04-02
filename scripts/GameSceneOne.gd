@@ -34,6 +34,10 @@ func _ready():
 
 
 func _process(delta):
+	process_speeds_and_distances(delta)
+
+
+func process_speeds_and_distances(delta):
 	meteorite_node.meteorite_speed = meteorite_speed
 	
 	current_earth_meteorite_distance = (earth_node.position.x - meteorite_node.position.x)
