@@ -14,6 +14,7 @@ var sonic_waves_texture = load("res://assets/visual/game/defence_systems/defence
 onready var defensive_sprite = $DefensiveSprite
 onready var warning_label = $WarningLabel
 onready var root_node = $"../../"
+onready var meteorite_node = $"../Meteorite"
 
 
 func _ready():
@@ -58,6 +59,7 @@ func _process(delta):
 					var spawned_rocket = new_rocket.instance()
 					get_parent().add_child(spawned_rocket)
 					spawned_rocket.global_position = global_position
+					spawned_rocket.set_rotation(get_angle_to(meteorite_node.position))
 					root_node.label_total_funds -= 20
 					placing_defence_system = false
 					selected_defence_system = 0
@@ -66,6 +68,7 @@ func _process(delta):
 					var spawned_laser = new_laser.instance()
 					get_parent().add_child(spawned_laser)
 					spawned_laser.global_position = global_position
+					spawned_laser.set_rotation(get_angle_to(meteorite_node.position))
 					root_node.label_total_funds -= 50
 					placing_defence_system = false
 					selected_defence_system = 0
@@ -74,6 +77,7 @@ func _process(delta):
 					var spawned_sonic_wave = new_sonic_wave.instance()
 					get_parent().add_child(spawned_sonic_wave)
 					spawned_sonic_wave.global_position = global_position
+					spawned_sonic_wave.set_rotation(get_angle_to(meteorite_node.position))
 					root_node.label_total_funds -= 100
 					placing_defence_system = false
 					selected_defence_system = 0
@@ -82,6 +86,7 @@ func _process(delta):
 					var spawned_chute = new_chute.instance()
 					get_parent().add_child(spawned_chute)
 					spawned_chute.global_position = global_position
+					spawned_chute.set_rotation(get_angle_to(meteorite_node.position))
 					root_node.label_total_funds -= 200
 					placing_defence_system = false
 					selected_defence_system = 0

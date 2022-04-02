@@ -23,9 +23,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.2588831"
-     inkscape:cx="63.291983"
-     inkscape:cy="27.140909"
+     inkscape:zoom="5.8848186"
+     inkscape:cx="16.775321"
+     inkscape:cy="18.091849"
      inkscape:document-units="px"
      inkscape:current-layer="layer17"
      inkscape:document-rotation="0"
@@ -88,7 +88,7 @@
      inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Rocket"
-     style="display:inline"
+     style="display:none"
      sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#ffffff;stroke-width:1.058;stroke-linejoin:round"
@@ -151,7 +151,7 @@
      inkscape:groupmode="layer"
      id="layer20"
      inkscape:label="Laser"
-     style="display:none;mix-blend-mode:normal"
+     style="display:inline;mix-blend-mode:normal"
      sodipodi:insensitive="true">
     <path
        style="fill:#ffffff;stroke-width:1.058;stroke-linejoin:round"
