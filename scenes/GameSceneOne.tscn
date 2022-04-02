@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -21,6 +21,19 @@
 [ext_resource path="res://scenes/TypewriterDialogScene.tscn" type="PackedScene" id=19]
 [ext_resource path="res://scripts/EventManager.gd" type="Script" id=20]
 [ext_resource path="res://scenes/GameOverScene.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_btn_normal.png" type="Texture" id=22]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_btn_focused.png" type="Texture" id=23]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_btn_pressed.png" type="Texture" id=24]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_btn_disabled.png" type="Texture" id=25]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_btn_hover.png" type="Texture" id=26]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_rocket.png" type="Texture" id=27]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_laser.png" type="Texture" id=28]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_chute.png" type="Texture" id=29]
+[ext_resource path="res://assets/visual/ui/game_ui/defence_sonic_waves.png" type="Texture" id=30]
+[ext_resource path="res://scripts/LaserButton.gd" type="Script" id=31]
+[ext_resource path="res://scripts/SonicWaves.gd" type="Script" id=32]
+[ext_resource path="res://scripts/RocketButton.gd" type="Script" id=33]
+[ext_resource path="res://scripts/SolarChute.gd" type="Script" id=34]
 
 [node name="GameSceneOne" type="Node2D"]
 script = ExtResource( 11 )
@@ -144,6 +157,124 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="DefenceButtons" type="Node2D" parent="GameUiLabels"]
+position = Vector2( 352, -12 )
+
+[node name="RocketButton" type="TextureButton" parent="GameUiLabels/DefenceButtons"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 25 )
+texture_focused = ExtResource( 23 )
+script = ExtResource( 33 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RocketPriceLabel" type="Label" parent="GameUiLabels/DefenceButtons/RocketButton"]
+margin_right = 96.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "20 G"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RocketSprite" type="Sprite" parent="GameUiLabels/DefenceButtons/RocketButton"]
+texture = ExtResource( 27 )
+offset = Vector2( 48, 40 )
+
+[node name="LaserButton" type="TextureButton" parent="GameUiLabels/DefenceButtons"]
+margin_left = 128.0
+margin_right = 224.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 25 )
+texture_focused = ExtResource( 23 )
+script = ExtResource( 31 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LaserPriceLabel" type="Label" parent="GameUiLabels/DefenceButtons/LaserButton"]
+margin_right = 96.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "20 G"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LaserSprite" type="Sprite" parent="GameUiLabels/DefenceButtons/LaserButton"]
+texture = ExtResource( 28 )
+offset = Vector2( 48, 40 )
+
+[node name="SonicWaves" type="TextureButton" parent="GameUiLabels/DefenceButtons"]
+margin_left = 256.0
+margin_right = 352.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 25 )
+texture_focused = ExtResource( 23 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SonicWavesPriceLabel" type="Label" parent="GameUiLabels/DefenceButtons/SonicWaves"]
+margin_right = 96.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "20 G"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SonicWavesSprite" type="Sprite" parent="GameUiLabels/DefenceButtons/SonicWaves"]
+texture = ExtResource( 30 )
+offset = Vector2( 48, 40 )
+
+[node name="SolarChute" type="TextureButton" parent="GameUiLabels/DefenceButtons"]
+margin_left = 384.0
+margin_right = 480.0
+margin_bottom = 96.0
+texture_normal = ExtResource( 22 )
+texture_pressed = ExtResource( 24 )
+texture_hover = ExtResource( 26 )
+texture_disabled = ExtResource( 25 )
+texture_focused = ExtResource( 23 )
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SolarChutePriceLabel" type="Label" parent="GameUiLabels/DefenceButtons/SolarChute"]
+margin_right = 96.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 3 )
+text = "20 G"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SolarChuteSprite" type="Sprite" parent="GameUiLabels/DefenceButtons/SolarChute"]
+texture = ExtResource( 29 )
+offset = Vector2( 48, 40 )
 
 [node name="TypewriterDialogManager" type="Node" parent="."]
 
