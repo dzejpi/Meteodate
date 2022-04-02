@@ -5,8 +5,8 @@ onready var dev_logo_sprite = $DevLogoSprite
 onready var jam_logo_sprite = $JamLogoSprite
 onready var transition_overlay_sprite = $TransitionOverlay/TransitionSprite
 
-var screen_width = (OS.window_size.x / 2)
-var screen_height = (OS.window_size.y / 2)
+var screen_width = (1280 / 2)
+var screen_height = (720 / 2)
 
 # Logos displayed
 var logos_displayed = 0
