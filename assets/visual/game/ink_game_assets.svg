@@ -14,7 +14,7 @@
    id="svg8"
    inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
    sodipodi:docname="ink_game_assets.svg"
-   inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/game_main_bg.png"
+   inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/game_earth_shape.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -26,11 +26,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.82243322"
-     inkscape:cx="680.21274"
-     inkscape:cy="402.30511"
+     inkscape:zoom="0.90358268"
+     inkscape:cx="908.1974"
+     inkscape:cy="224.18307"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer7"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px" />
@@ -49,7 +49,9 @@
   <g
      inkscape:label="Game Background"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     sodipodi:insensitive="true"
+     style="display:none">
     <g
        inkscape:groupmode="layer"
        id="layer6"
@@ -3196,11 +3198,69 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Earth"
-     sodipodi:insensitive="true" />
+     inkscape:label="Earth">
+    <g
+       inkscape:groupmode="layer"
+       id="layer7"
+       inkscape:label="Earth Shapes">
+      <circle
+         style="fill:#005784;stroke:#005784;stroke-width:1.05800002;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.25"
+         id="path4158"
+         cx="293.37143"
+         cy="85.735313"
+         r="39.158337"
+         inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/earth/game_earth_shape.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#15c2a5;stroke:#15c2a5;stroke-width:1.05833;stroke-linejoin:round"
+         d="m 274.88781,51.960902 -3.12222,5.33798 -2.11502,1.913615 -0.50361,3.625798 0.50361,3.52508 1.61145,2.215766 -0.40286,-4.632966 3.82722,8.258763 3.82722,1.611468 4.53225,1.309315 3.92796,4.330813 4.33082,0.705016 0.50357,2.014334 -3.22292,4.330816 0.10066,4.12938 4.63294,6.94944 3.82722,2.31648 -1.91358,9.97096 -1.71221,7.05015 1.41004,2.61864 2.71935,-0.20143 -1.61144,-2.11506 3.32361,-3.22293 5.74084,-3.72651 6.54658,-5.94229 3.12224,-2.41718 0.50359,-3.222943 4.23009,-4.834402 1.61146,-4.330812 -4.23008,-2.920777 -4.93513,-1.208602 -3.22292,-4.632962 -3.02152,-0.201434 -3.32362,-3.122217 -3.92796,-0.201432 -2.21575,-1.410032 -4.43156,3.021497 -5.74085,-2.01433 2.11506,-2.71935 -4.83439,-0.604301 1.3093,-3.927944 -3.62579,1.913613 -2.82005,-0.705018 0.40286,-4.733679 2.61862,-1.913613 2.31649,0.201432 3.92796,-0.402869 1.2086,2.316484 1.71215,1.208598 -1.10785,-4.330813 2.51789,-2.316482 2.31649,-3.122215 6.54659,-1.913617 3.12222,-1.712182 -2.3165,-0.604298 -2.71936,1.309317 -3.52505,-0.503585 4.12935,-1.913615 -1.71217,-2.316482 -2.11505,0.604301 -2.61862,-0.805734 -1.1079,2.920781 -3.92793,-2.31648 -0.80573,-0.805733 4.33079,-2.4172 -5.74084,0.201433 -9.8702,3.32365 z"
+         id="path4160"
+         inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/earth/game_earth_shape.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#15c2a5;stroke:#15c2a5;stroke-width:1.05833;stroke-linejoin:round"
+         d="m 324.03753,62.032562 1.61146,4.632962 -0.30217,2.820065 1.51077,3.122217 v 3.122214 l 1.91364,2.316482 1.91358,3.52508 1.71221,2.014334 -1.24958,-7.453031 -2.36498,-6.897211 z"
+         id="path4162"
+         sodipodi:nodetypes="ccccccccccc"
+         inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/earth/game_earth_shape.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:none;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round;stroke-opacity:1"
+         id="path4158-35"
+         cx="293.37134"
+         cy="85.735321"
+         r="39.158337"
+         inkscape:export-filename="/Users/dzejpi/godot/meteodate/assets/visual/game/earth/game_earth_shape.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="Defence Systems"
+     sodipodi:insensitive="true">
+    <g
+       inkscape:groupmode="layer"
+       id="layer10"
+       inkscape:label="Rockets"
+       sodipodi:insensitive="true" />
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Meteorite"
-     sodipodi:insensitive="true" />
+     sodipodi:insensitive="true">
+    <g
+       inkscape:groupmode="layer"
+       id="layer12"
+       inkscape:label="Meteorite Guide" />
+    <g
+       inkscape:groupmode="layer"
+       id="layer11"
+       inkscape:label="Meteorite Shape" />
+  </g>
 </svg>
