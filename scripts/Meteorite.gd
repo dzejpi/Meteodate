@@ -5,7 +5,7 @@ var meteorite_speed = 1
 var rotation_speed = 0.1
 # Placeholder value, overridden immediately
 var distance_left = 1000
-var crashing_into_earth = true
+var crashing_into_earth = false
 
 onready var meteorite_shape = $MeteoriteShapeSprite
 onready var meteorite_burning_shape = $MeteoriteBurnShapeSprite

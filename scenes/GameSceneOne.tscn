@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -34,6 +34,8 @@
 [ext_resource path="res://scripts/SonicWaves.gd" type="Script" id=32]
 [ext_resource path="res://scripts/RocketButton.gd" type="Script" id=33]
 [ext_resource path="res://scripts/SolarChute.gd" type="Script" id=34]
+[ext_resource path="res://scripts/CursorNode.gd" type="Script" id=35]
+[ext_resource path="res://assets/visual/game/defence_systems/defence_rocket.png" type="Texture" id=36]
 
 [node name="GameSceneOne" type="Node2D"]
 script = ExtResource( 11 )
@@ -82,6 +84,12 @@ offset = Vector2( -82, 0 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 15 )
 offset = Vector2( -82, 0 )
+
+[node name="CursorNode" type="Node2D" parent="GameNode"]
+script = ExtResource( 35 )
+
+[node name="DefensiveSprite" type="Sprite" parent="GameNode/CursorNode"]
+texture = ExtResource( 36 )
 
 [node name="GameOver" type="Node" parent="."]
 
@@ -280,3 +288,8 @@ offset = Vector2( 48, 40 )
 
 [node name="TypewriterDialog" parent="TypewriterDialogManager" instance=ExtResource( 19 )]
 visible = false
+
+[connection signal="pressed" from="GameUiLabels/DefenceButtons/RocketButton" to="GameUiLabels/DefenceButtons/RocketButton" method="_on_RocketButton_pressed"]
+[connection signal="pressed" from="GameUiLabels/DefenceButtons/LaserButton" to="GameUiLabels/DefenceButtons/LaserButton" method="_on_LaserButton_pressed"]
+[connection signal="pressed" from="GameUiLabels/DefenceButtons/SonicWaves" to="GameUiLabels/DefenceButtons/SonicWaves" method="_on_SonicWaves_pressed"]
+[connection signal="pressed" from="GameUiLabels/DefenceButtons/SolarChute" to="GameUiLabels/DefenceButtons/SolarChute" method="_on_SolarChute_pressed"]
