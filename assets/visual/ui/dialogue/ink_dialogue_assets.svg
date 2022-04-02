@@ -23,11 +23,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2914878"
-     inkscape:cx="345.47369"
-     inkscape:cy="240.0286"
+     inkscape:zoom="1.6060766"
+     inkscape:cx="132.61674"
+     inkscape:cy="79.929091"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px" />
@@ -44,14 +44,59 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
+     inkscape:label="Text BG"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     style="display:none;opacity:1">
     <path
-       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833335;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:butt"
+       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 13.890586,13.890627 H 80.301041 L 71.999735,29.501041 H 13.890586 Z"
        id="path883"
        sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="98"
+       inkscape:export-ydpi="98" />
+    <rect
+       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
+       id="rect839"
+       width="303.74167"
+       height="49.741673"
+       x="5.8208318"
+       y="5.8208318"
+       inkscape:export-xdpi="98"
+       inkscape:export-ydpi="98" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Character BG">
+    <path
+       style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
+       d="M 3.1749236,20.108332 H 53.974924 L 37.04159,3.1749984 H 20.108257 Z"
+       id="path842"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="98"
+       inkscape:export-ydpi="98" />
+    <path
+       style="fill:#005784;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
+       d="M 3.1749236,20.108331 H 20.108334 V 3.1749984 h -7.7e-5 z"
+       id="path842-0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="98"
+       inkscape:export-ydpi="98" />
+    <path
+       style="fill:#005784;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
+       d="M 37.041667,20.108318 H 53.974924 L 37.04159,3.1749889 h 7.7e-5 z"
+       id="path842-7"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="98"
+       inkscape:export-ydpi="98" />
+    <rect
+       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       id="rect874"
+       width="16.933334"
+       height="16.933334"
+       x="20.108334"
+       y="3.1749837"
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
   </g>

@@ -11,6 +11,15 @@ font_data = ExtResource( 4 )
 [node name="TypewriterDialog" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="CharacterSpriteBg" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( 64, 400 )
+
+[node name="CharacterSprite" type="Sprite" parent="CharacterSpriteBg"]
+centered = false
+offset = Vector2( 64, 400 )
+
 [node name="TextBgSprite" type="Sprite" parent="."]
 position = Vector2( 64, 464 )
 texture = ExtResource( 2 )
@@ -27,13 +36,3 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="CharacterSpriteBg" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-centered = false
-offset = Vector2( 64, 400 )
-
-[node name="CharacterSprite" type="Sprite" parent="CharacterSpriteBg"]
-texture = ExtResource( 1 )
-centered = false
-offset = Vector2( 64, 400 )
