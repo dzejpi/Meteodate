@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://assets/visual/game/meteorite/meteorite_shape.png" type="Texture" id=9]
 [ext_resource path="res://assets/visual/game/meteorite/meteorite_burn_tail.png" type="Texture" id=10]
 [ext_resource path="res://scripts/GameSceneOne.gd" type="Script" id=11]
+[ext_resource path="res://scripts/Meteorite.gd" type="Script" id=12]
+[ext_resource path="res://scripts/RightLabels.gd" type="Script" id=13]
+[ext_resource path="res://scripts/LeftLabels.gd" type="Script" id=14]
 
 [node name="GameSceneOne" type="Node2D"]
 script = ExtResource( 11 )
@@ -31,20 +34,21 @@ texture = ExtResource( 7 )
 
 [node name="Meteorite" type="Node2D" parent="GameNode"]
 position = Vector2( 48, 360 )
+script = ExtResource( 12 )
 
 [node name="MeteoriteTailSprite" type="Sprite" parent="GameNode/Meteorite"]
 self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( -80, 0 )
+position = Vector2( -82, 0 )
 texture = ExtResource( 10 )
 
 [node name="MeteoriteBurnShapeSprite" type="Sprite" parent="GameNode/Meteorite"]
 self_modulate = Color( 1, 1, 1, 0 )
 texture = ExtResource( 8 )
-offset = Vector2( -80, 0 )
+offset = Vector2( -82, 0 )
 
 [node name="MeteoriteShapeSprite" type="Sprite" parent="GameNode/Meteorite"]
 texture = ExtResource( 9 )
-offset = Vector2( -80, 0 )
+offset = Vector2( -82, 0 )
 
 [node name="Pause" type="Node" parent="."]
 
@@ -58,6 +62,7 @@ position = Vector2( 512, 192 )
 position = Vector2( 32, 32 )
 
 [node name="LeftLabels" type="Node2D" parent="GameUiLabels"]
+script = ExtResource( 14 )
 
 [node name="LeftLabelsLg" type="Sprite" parent="GameUiLabels/LeftLabels"]
 position = Vector2( -16, -12 )
@@ -86,6 +91,7 @@ __meta__ = {
 }
 
 [node name="RightLabels" type="Node2D" parent="GameUiLabels"]
+script = ExtResource( 13 )
 
 [node name="RightLabelsLg" type="Sprite" parent="GameUiLabels/RightLabels"]
 position = Vector2( 1101, 20 )
