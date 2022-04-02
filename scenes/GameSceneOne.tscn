@@ -73,6 +73,7 @@ offset = Vector2( -82, 0 )
 [node name="GameOver" type="Node" parent="."]
 
 [node name="GameOverScene" parent="GameOver" instance=ExtResource( 21 )]
+visible = false
 
 [node name="Pause" type="Node" parent="."]
 
@@ -147,3 +148,4 @@ __meta__ = {
 [node name="TypewriterDialogManager" type="Node" parent="."]
 
 [node name="TypewriterDialog" parent="TypewriterDialogManager" instance=ExtResource( 19 )]
+visible = false
