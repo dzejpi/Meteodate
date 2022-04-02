@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_voice_hey_honey.wav-086d696575a4294f9af2e1356fe392ff.sample"
+
+[deps]
+
+source_file="res://assets/sfx/sfx_voice_hey_honey.wav"
+dest_files=[ "res://.import/sfx_voice_hey_honey.wav-086d696575a4294f9af2e1356fe392ff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
