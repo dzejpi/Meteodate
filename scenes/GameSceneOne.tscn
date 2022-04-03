@@ -318,7 +318,6 @@ offset = Vector2( 48, 40 )
 [node name="TypewriterDialogManager" type="Node" parent="."]
 
 [node name="TypewriterDialog" parent="TypewriterDialogManager" instance=ExtResource( 19 )]
-visible = false
 
 [connection signal="mouse_entered" from="GameNode/Earth/EarthArea" to="GameNode/CursorNode" method="_on_EarthArea_mouse_entered"]
 [connection signal="mouse_exited" from="GameNode/Earth/EarthArea" to="GameNode/CursorNode" method="_on_EarthArea_mouse_exited"]

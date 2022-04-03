@@ -6,7 +6,7 @@ var initial_dialog_number = 0
 var dialog_number = 0
 
 var initial_event_number = 0
-var event_number = 0
+var event_number = 1
 
 onready var dialog_manager = $DialogManager
 onready var typewriter_dialog_manager = $"../TypewriterDialogManager/TypewriterDialog"
