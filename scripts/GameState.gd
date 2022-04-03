@@ -7,6 +7,7 @@ var days_survived = 0
 
 
 onready var sfx_node = $SfxNode
+onready var music_node = $MusicNode
 
 var select = preload("res://assets/sfx/sfx_button_select.wav")
 var buy = preload("res://assets/sfx/sfx_buy.wav")
@@ -18,9 +19,15 @@ var voice_exterminate = preload("res://assets/sfx/sfx_voice_exterminate.wav")
 var hey_honey = preload("res://assets/sfx/sfx_voice_hey_honey.wav")
 var new_message_voice = preload("res://assets/sfx/sfx_voice_new_message.wav")
 
+#var game_music = preload("")
+
 
 func _ready():
 	pass
+
+
+#func play_music():
+#	music_node.play(game_music)
 
 
 func play_sound(action):
