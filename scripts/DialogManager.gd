@@ -22,76 +22,61 @@ func get_dialog(dialog_number):
 	
 	match(dialog_number):
 		1:
-			dialog_text = ["Hey. This is Nick from the operational.", "We have detected the meteorite aiming for the Earth.", "Not the fastest one. Can your department take care of it?", "You have enough funding for that. So just buy what you need. Thanks!"]
-			GameState.play_sound("new_message")
+			dialog_text = ["Hey. This is Nick from the operational.", "We have detected the meteorite aiming for the Earth.", "Not the fastest one. Can your department take care of it?", "You have enough funding for that. So just buy what you need and get cracking. Thanks!"]
 		2:
 			dialog_text = ["RIRrTws4W2E4p22JeBS6ISvil8mH7ExtXPCgBPMARopBLHLy80xnDzJMGj6NRDmctX89QRHuXNoTQ6KmsB82EHoioaXd9FUdEXsNgN88YxYi53LTX0plXMbR57", "8mH7ExtXPCgBPMARopBLHLy80xnDzJMGj6NRDmctX89QRHuXNoTQ6KmsB82EHoioaXd9FUd"]
-			GameState.play_sound("new_message")
 		3:
 			dialog_text = ["H 3lXo, c  4Rlhl  1NSs.  p0 A0u  _E 4.?", "H _1l o0,  eArt hL 1n __-s, do   yo u  re ad?", "The si gnal s hould be correct now."]
-			GameState.play_sound("new_message")
 		4:
-			dialog_text = ["Your planet got in our way to our new great project.", "Our corporation is truly sorry about that.", "There is no need for action from your side, everything is planned into the smallest details.", "Thank you for understanding and for your cooperation."]
-			GameState.play_sound("new_message")
+			dialog_text = ["Your planet seemed to get in a way to our new great project.", "Our corporation is truly sorry about that. You need to understand that this had been a difficult decision for us.", "Thankfully, there is no need for action from your side; everything is planned into the smallest details.", "Thank you for understanding and for your cooperation."]
 		5:
-			# Anything to offer?
-			dialog_text = ["We are sorry for the inconvenience.", "Feel free to leave us any feedback.", "We are taking every feedback extremely seriously."]
+			dialog_text = ["Something is jamming my communication.", "What is going on?", "Are you alright?"]
 		6:
-			# 5 -> Solution
-			dialog_text = ["Are you really certain that you have anything interesting to offer?", "Our corporation does not want to waste its valuable resources with uninteresting offers."]
-			GameState.play_sound("new_message")
+			dialog_text = ["ul2QHtdBMK488lNXxiDsLvpoR8xEERe6H432PXmTH7EIB5jNJBNXM8cXm8oJ2pigaSI60HBQYA5sSLxR6nXtGgiNL9CXrWwR2UTRoX7M0TDoFpsbzP89yEYRdm", "NuxE72jiQQA6HRMtm8JoRyH6pK9nHR8BNPmxt0LDo9CdLUPEXMFXX8BDBc8zsXGdmoagHTo"]
 		7:
-			# 6 -> Love
-			dialog_text = ["Love? What do you mean love? We have conducted our research.", "It seems that love is just a chemical reaction in your brains.", "It does not bring any value for our corporation, we are afraid."]
-			GameState.play_sound("new_message")
+			dialog_text = ["I don’t like what’s going on.", "We increased your funding.", "Give them hell!"]
 		8:
-			# 6 -> Money
-			dialog_text = ["Dear... Sir or Madam, we have run the numbers through and you can be assured that our project exceeds the whole Earth value.", "Since it appears to us that the valuable time is lost, we have prioritised the speed of the operation.", "Thank you for your understanding."]
-			GameState.play_sound("new_message")
+			dialog_text = ["Dear... Sir or Madam, it seems that you are not fully able to comprehend the goal of our mission.", "You seem to understand the meaning and the value of time, and you can certainly understand that it is being wasted here, so we have prioritised the speed of our operation.", "Thank you for your understanding."]
 		9:
-			dialog_text = ["However, since our responsibility is to ensure the success of the mission,", "we can assign you the agent that will help you with all of your complaints and suggestions."]
-			GameState.play_sound("new_message")
+			dialog_text = ["Hey! The satisfaction of all customers is very important to us. Since it is our responsibility to ensure the success of the mission,", "we will assign you the agent that can help you with all of your complaints and suggestions."]
 		10:
-			dialog_text = ["Hey, operations here.", "What the hell is goin g o no nnnn?"]
+			dialog_text = ["Hey, operations here. I can’t hear you", "What the hell is goin g o no nnnn?", "mQN8EjdoXRi9oc6KUDdaHsXTHBoQmRNXut29F86"]
 		11:
-			# 10 -> What is your name?
-			dialog_text = ["Sorry for the interruption. It had been taken care of.", "Is there more that you want to talk about?"]
+			dialog_text = ["Sorry for the interruption. It had been taken care of."]
 		12:
-			# 10 -> Angry
-			dialog_text = ["We do not reason with the unreasonable.", "While we value the propositions of all, we cannot accept your demands.", "The speed of the operation was increased."]
+			dialog_text = ["My name is Gah Luraveolaklep and I will be your agent today.", "It seems that you are not really understanding when it comes to our project.", "Let me explain it to you."]
 		13:
-			# 5 -> Angry
-			dialog_text = ["Our corporation does not appreciate this tone of your voice.", "We have prioritised our operations to exceed our deadline."]
+			dialog_text = ["Hey, got the connection back.", "We urged the rest of the agencies and they see what’s up.", "We are sending more resources your way."]
 		14:
-			dialog_text = [""]
+			dialog_text = ["The project of the intergalactic highway has been a dream of us for generations.", "It will connect all Kencax, Qhergeit and Bhaczmut beings."]
 		15:
-			dialog_text = [""]
+			dialog_text = ["While we understand being upset about your planet being destroyed,", "it is a price we are willing to pay."]
 		16:
-			dialog_text = [""]
+			dialog_text = ["Just between us - Earth seemed pretty fine.", "You people definitely know how to life.", "If you have enough money, that is."]
 		17:
-			dialog_text = [""]
+			dialog_text = ["We are focused purely on the efficacy. We do not have time to relax.", ""]
 		18:
-			dialog_text = [""]
+			dialog_text = ["See? We are so efficient, I can just press a button.", "Just like that.", "And it goes wheeeeeeeee!"]
 		19:
-			dialog_text = [""]
+			dialog_text = ["I have to admit, that I am having a lot of fun though.", "Sure, I cannot hear you, but it feel like we’re connected somehow anyway."]
 		20:
-			dialog_text = [""]
+			dialog_text = ["Hey! They are jamming our communications.", "We poured all of the funds we have for you.", "Blow them to pieces!"]
 		21:
-			dialog_text = [""]
+			dialog_text = ["Too bad I couldn’t meet you in person.", "You seem like a great human. And capable, wow!", "I am..."]
 		22:
-			dialog_text = [""]
+			dialog_text = ["I am...", "I...", "You know, I am lonely here."]
 		23:
-			dialog_text = [""]
+			dialog_text = ["Sorry I was so hard on you.", "You seem to be doing your best.", "It’s not really fair."]
 		24:
-			dialog_text = [""]
+			dialog_text = ["Don’t listen to them! It’s a trick! Fire, fire!"]
 		25:
-			dialog_text = [""]
+			dialog_text = ["Trick? Trick?! I will show you the trick."]
 		26:
-			dialog_text = [""]
+			dialog_text = ["How do you like that?"]
 		27:
-			dialog_text = [""]
+			dialog_text = ["Got you scared there, huh?"]
 		28:
-			dialog_text = [""]
+			dialog_text = ["Not so tough now."]
 		29:
 			dialog_text = [""]
 		30:
@@ -117,26 +102,11 @@ func get_dialog(dialog_number):
 		40:
 			dialog_text = [""]
 		41:
-			dialog_text = [""]
+			dialog_text = ["Don’t leave me, I love you."]
 		42:
-			dialog_text = [""]
-		43:
-			dialog_text = [""]
-		44:
-			dialog_text = [""]
-		45:
-			dialog_text = [""]
-		46:
-			dialog_text = [""]
-		47:
-			dialog_text = [""]
-		48:
-			dialog_text = [""]
-		49:
-			dialog_text = [""]
-		50:
 			dialog_text = ["Dear Sir or Madam", "We have noticed the unusual and unprofessional behavior of one of our employess.", "We want to assure you that the corrective measures were taken.", "Due to the unexpected delay in our operation, we are prioritizing our mission now.", "Have a wonderful day!"]
 		
+	GameState.play_sound("new_message")
 	return dialog_text
 
 
@@ -228,22 +198,6 @@ func get_dialog_avatar(dialog_number):
 			dialog_avatars = [1]
 		42:
 			dialog_avatars = [1]
-		43:
-			dialog_avatars = [1]
-		44:
-			dialog_avatars = [1]
-		45:
-			dialog_avatars = [1]
-		46:
-			dialog_avatars = [1]
-		47:
-			dialog_avatars = [1]
-		48:
-			dialog_avatars = [1]
-		49:
-			dialog_avatars = [1]
-		50:
-			dialog_avatars = [1]
-		
+
 
 	return dialog_avatars

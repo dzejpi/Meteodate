@@ -64,66 +64,218 @@ func process_game(delta):
 func process_events(delta):
 	if !blocked_by_decision:
 		match(current_event_number):
+			0:
+				pass
 			1:
-				event_number = 1
-				dialog_number = 1
-				countdown_to_next_event = 15
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
 				
 				current_event_number += 1
 			2:
-				dialog_number = 2
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
 				
 				current_event_number += 1
 			3:
 				dialog_number = 3
 				
 				current_event_number += 1
-				countdown_to_next_event = 5
+				countdown_to_next_event = 1
 			4:
 				dialog_number = 4
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			5:
-				dialog_number = 5
-				
-				deciding_dialog = true
-				first_choice = "Let's talk!"
-				second_choice = "Die, alien scum!"
-				
-				typewriter_dialog_manager.processing_dialog = true
-				blocked_by_decision = true
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
 				
 				current_event_number += 1
-				countdown_to_next_event = 5
 			6:
-				if first_choice_selected:
-					current_event_number += 1
-					countdown_to_next_event = 1
-				else:
-					dialog_number = 13
-					trigger_event(4)
-					# Game ends here
-					current_event_number = 0
-			7:
-				dialog_number = 6
-					
-				deciding_dialog = true
-					
-				first_choice = "Love"
-				second_choice = "Money"
-				
-				typewriter_dialog_manager.processing_dialog = true
-				blocked_by_decision = true
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
 				
 				current_event_number += 1
+			7:
+				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				
+				current_event_number += 1
 			8:
-				# both dialogs routed here:
-				if first_choice_selected:
-					dialog_number = 7
-				else:
-					dialog_number = 8
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			9:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			10:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			11:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			12:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			13:
+				dialog_number = 3
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			14:
+				dialog_number = 4
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			15:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			16:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			17:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			18:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			19:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			20:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			21:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			22:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			23:
+				dialog_number = 3
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			24:
+				dialog_number = 4
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			25:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			26:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			27:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			28:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			29:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			30:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			31:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			32:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			33:
+				dialog_number = 3
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			34:
+				dialog_number = 4
+				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			35:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			36:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			37:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			38:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			39:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			40:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			41:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
+			42:
+				dialog_number = current_event_number
+				countdown_to_next_event = 5
+				
+				current_event_number += 1
 
 
 func display_dialog(dialog_number, delta):
