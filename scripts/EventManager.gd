@@ -24,16 +24,18 @@ func _process(delta):
 			is_waiting_for_next_event = false
 
 
-func trigger_event(event_number):
-	match(event_number):
+func trigger_event(new_event_number):
+	event_number = new_event_number
+	
+	match(new_event_number):
 		1:
-			wait_for_another_event(3, event_number + 1)
+			increase_meteorite_speed(2)
 		2:
-			increase_meteorite_speed(2)
-			wait_for_another_event(5, event_number + 1)
+			increase_meteorite_speed(10)
 		3:
-			trigger_dialog(2)
-			increase_meteorite_speed(2)
+			increase_meteorite_speed(20)
+		4: 
+			increase_meteorite_speed(30)
 
 
 func increase_meteorite_speed(increasement):
@@ -44,12 +46,8 @@ func decrease_meteorite_speed(increasement):
 	game_root.meteorite_speed -= increasement
 	
 	
-func trigger_dialog(dialog_number):
-	game_root.trigger_dialog(dialog_number)
-	
-	
-func wait_for_another_event(seconds, event_number):
+func wait_for_another_event(seconds):
 	is_waiting_for_next_event = true
-	next_event_waiting = event_number
+	next_event_waiting = event_number + 1
 	waiting_countdown = seconds
 	current_waiting_countdown = 0
