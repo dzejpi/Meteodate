@@ -47,6 +47,11 @@ func _process(delta):
 
 
 func process_game(delta):
+	if typewriter_dialog_manager.processing_dialog:
+		blocked_by_decision = true
+	else:
+		blocked_by_decision = false
+		
 	if !blocked_by_decision:
 		if current_countdown_to_next_event < countdown_to_next_event:
 			current_countdown_to_next_event += delta
@@ -55,16 +60,7 @@ func process_game(delta):
 			countdown_to_next_event = 0
 			
 			process_events(delta)
-	
-	if typewriter_dialog_manager.decision_dialog:
-		if typewriter_dialog_manager.decision_made:
-			blocked_by_decision = false
-			first_choice_selected = typewriter_dialog_manager.first_decision_selected
-		else:
-			blocked_by_decision = true
-	else:
-		blocked_by_decision = false
-		
+
 func process_events(delta):
 	if !blocked_by_decision:
 		match(current_event_number):
@@ -78,17 +74,22 @@ func process_events(delta):
 
 				current_event_number += 1
 			2:
+				dialog_number = 2
 				current_event_number += 1
 				countdown_to_next_event = 5
 			3:
-				if first_choice_selected:
-					current_event_number = 4
-				else:
-					current_event_number = 5
+				dialog_number = 3
+				current_event_number += 1
+				countdown_to_next_event = 5
 			4:
-				dialog_number = 2
+				dialog_number = 4
 				
-				countdown_to_next_event = 3
+				deciding_dialog = true
+				first_choice = "What? Why?"
+				second_choice = "Really? Die, alien scum!"
+				
+				current_event_number += 1
+				countdown_to_next_event = 5
 			5:
 				dialog_number = 3
 
