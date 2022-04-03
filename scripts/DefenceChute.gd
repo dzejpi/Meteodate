@@ -40,7 +40,9 @@ func _process(delta):
 			hit_time += delta
 			explosion_sprite.scale.x += 0.1 * delta
 			explosion_sprite.scale.y += 0.1 * delta
-			explosion_sprite.modulate.a -= 0.25 * delta
+			explosion_sprite.modulate.a -= 0.5 * delta
+			if (explosion_sprite.modulate.a <= 0):
+				queue_free()
 		else:
 			pass
 
