@@ -24,11 +24,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4318447"
-     inkscape:cx="895.23448"
-     inkscape:cy="264.72971"
+     inkscape:zoom="1.477207"
+     inkscape:cx="148.20984"
+     inkscape:cy="213.30182"
      inkscape:document-units="px"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px" />
@@ -48,7 +48,7 @@
      inkscape:label="Text BG"
      inkscape:groupmode="layer"
      id="layer1"
-     style="display:inline;opacity:1;mix-blend-mode:normal">
+     style="display:none;opacity:1;mix-blend-mode:normal">
     <path
        style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        d="M 13.890586,13.890627 H 80.301041 L 71.999735,29.501041 H 13.890586 Z"
@@ -86,41 +86,7 @@
          width="25.4"
          height="25.4"
          preserveAspectRatio="none"
-         xlink:href="data:image/png;base64,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
-RK5CYII=
-"
+         xlink:href="data:image/png;base64,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 RK5CYII= "
          id="image881"
          x="238.125"
          y="52.916668" />
@@ -139,7 +105,7 @@ RK5CYII=
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Character BG"
-     style="display:none">
+     style="display:inline">
     <path
        style="fill:#31a2f2;stroke:#005784;stroke-width:1.05833;stroke-linejoin:round"
        d="M 3.1749236,20.108332 H 53.974924 L 37.04159,3.1749984 H 20.108257 Z"
@@ -148,27 +114,30 @@ RK5CYII=
        inkscape:export-xdpi="98"
        inkscape:export-ydpi="98" />
     <path
-       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
        d="M 2.6457569,40.745844 H 19.579167 V 23.812507 h -7.7e-5 z"
        id="path842-0"
        sodipodi:nodetypes="ccccc"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/dzejpi/dialogue_character_bg.png" />
     <path
-       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
        d="M 36.5125,40.745831 H 53.445757 L 36.512423,23.812498 h 7.7e-5 z"
        id="path842-7"
        sodipodi:nodetypes="ccccc"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/dzejpi/dialogue_character_bg.png" />
     <rect
-       style="fill:#31a2f2;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
+       style="fill:#005784;stroke:none;stroke-width:1.05833;stroke-linejoin:round"
        id="rect874"
        width="16.933334"
        height="16.933334"
        x="19.579166"
        y="23.812485"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
+       inkscape:export-ydpi="96"
+       inkscape:export-filename="/Users/dzejpi/dialogue_character_bg.png" />
   </g>
 </svg>
