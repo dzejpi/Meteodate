@@ -20,6 +20,8 @@ var text_fully_displayed = false
 
 var decision_dialog = false
 var decision_made = false
+var first_decision_selected = false
+
 var first_decision = "Hell yea!"
 var second_decision = "Hell no!"
 
@@ -148,3 +150,15 @@ func show_proper_avatar():
 			character_avatar.texture = noise_texture
 		3:
 			character_avatar.texture = operator_texture
+
+
+func _on_LeftDecisionButton_pressed():
+	decision_made = true
+	first_decision_selected = true
+	processing_dialog = false
+
+
+func _on_RightDecisionButton_pressed():
+	decision_made = true
+	first_decision_selected = false
+	processing_dialog = false

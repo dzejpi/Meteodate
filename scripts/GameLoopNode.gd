@@ -7,6 +7,8 @@ var initial_dialog_number = 0
 var dialog_number = 0
 
 var deciding_dialog = false
+var blocked_by_decision = false
+
 var first_choice = "First choice"
 var second_choice = "Second choice"
 
@@ -51,10 +53,17 @@ func process_game(delta):
 		countdown_to_next_event = 0
 		
 		process_events(delta)
-		
+	
+	if typewriter_dialog_manager.decision_dialog:
+		if typewriter_dialog_manager.decision_made:
+			blocked_by_decision = false
+		else:
+			blocked_by_decision = true
+	else:
+		blocked_by_decision = false
 		
 func process_events(delta):
-	if !deciding_dialog:
+	if !blocked_by_decision:
 		match(current_event_number):
 			1:
 				event_number = 1
@@ -64,7 +73,7 @@ func process_events(delta):
 				first_choice = "New phone, who dis?"
 				second_choice = "Not now, I have work to do"
 
-				#current_event_number += 1
+				current_event_number += 1
 				
 				countdown_to_next_event = 3
 			2:

@@ -105,3 +105,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="DecisionButtonNode/LeftDecisionButton" to="." method="_on_LeftDecisionButton_pressed"]
+[connection signal="pressed" from="DecisionButtonNode/RightDecisionButton" to="." method="_on_RightDecisionButton_pressed"]
