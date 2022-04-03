@@ -18,7 +18,7 @@ var event_number = 0
 
 var countdown_to_next_event = 6
 var current_countdown_to_next_event = 0
-var current_event_number = 1
+var current_event_number = 15
 
 onready var dialog_manager = $DialogManager
 onready var typewriter_dialog_manager = $"../TypewriterDialogManager/TypewriterDialog"
@@ -77,12 +77,12 @@ func process_events(delta):
 				
 				current_event_number += 1
 			3:
-				dialog_number = 3
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			4:
-				dialog_number = 4
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -127,12 +127,12 @@ func process_events(delta):
 				
 				current_event_number += 1
 			13:
-				dialog_number = 3
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			14:
-				dialog_number = 4
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -177,12 +177,12 @@ func process_events(delta):
 				
 				current_event_number += 1
 			23:
-				dialog_number = 3
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			24:
-				dialog_number = 4
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -227,12 +227,12 @@ func process_events(delta):
 				
 				current_event_number += 1
 			33:
-				dialog_number = 3
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			34:
-				dialog_number = 4
+				dialog_number = current_event_number
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -275,7 +275,7 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				current_event_number += 1
+				current_event_number = 0
 
 
 func display_dialog(dialog_number, delta):
