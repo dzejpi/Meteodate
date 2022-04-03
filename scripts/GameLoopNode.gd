@@ -18,7 +18,7 @@ var event_number = 0
 
 var countdown_to_next_event = 6
 var current_countdown_to_next_event = 0
-var current_event_number = 15
+var current_event_number = 1
 
 onready var dialog_manager = $DialogManager
 onready var typewriter_dialog_manager = $"../TypewriterDialogManager/TypewriterDialog"
