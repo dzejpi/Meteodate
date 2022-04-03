@@ -1,7 +1,7 @@
 extends TextureButton
 
 
-var music_on = true
+var music_on = false
 onready var music_label = $"MusicLabel"
 
 
