@@ -51,6 +51,7 @@ func _process(delta):
 			
 			if decision_made:
 				decision_node.visible = false
+				decision_dialog = false
 		else:
 			decision_node.visible = false
 	else:
