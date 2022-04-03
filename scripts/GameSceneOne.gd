@@ -48,8 +48,11 @@ func _process(delta):
 	if stopping_speed != GameState.stopping_speed:
 		stopping_speed = GameState.stopping_speed
 		meteorite_speed -= GameState.stopping_speed
-
-	meteorite_speed += (0.02 * delta)
+	
+	if meteorite_speed > -100:
+		meteorite_speed += (0.02 * delta)
+	else:
+		meteorite_speed += (0.05 * delta)
 
 func process_speeds_and_distances(delta):
 	meteorite_node.meteorite_speed = meteorite_speed
