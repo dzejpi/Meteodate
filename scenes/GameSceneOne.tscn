@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -41,6 +41,9 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 140.0
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 28.0
+
 [node name="GameSceneOne" type="Node2D"]
 script = ExtResource( 11 )
 
@@ -69,6 +72,8 @@ script = ExtResource( 16 )
 texture = ExtResource( 7 )
 
 [node name="EarthArea" type="Area2D" parent="GameNode/Earth"]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameNode/Earth/EarthArea"]
 shape = SubResource( 1 )
@@ -94,7 +99,13 @@ position = Vector2( -1, 0 )
 texture = ExtResource( 15 )
 offset = Vector2( -82, 0 )
 
+[node name="MeteoriteArea" type="Area2D" parent="GameNode/Meteorite"]
+
+[node name="MeteoriteCollisionShape" type="CollisionShape2D" parent="GameNode/Meteorite/MeteoriteArea"]
+shape = SubResource( 2 )
+
 [node name="EarthExplosionNode" type="Node2D" parent="GameNode"]
+visible = false
 position = Vector2( 48, 360 )
 
 [node name="MeteoriteCrashExplosion" type="Sprite" parent="GameNode/EarthExplosionNode"]
