@@ -105,7 +105,6 @@ offset = Vector2( -82, 0 )
 shape = SubResource( 2 )
 
 [node name="EarthExplosionNode" type="Node2D" parent="GameNode"]
-visible = false
 position = Vector2( 48, 360 )
 
 [node name="MeteoriteCrashExplosion" type="Sprite" parent="GameNode/EarthExplosionNode"]

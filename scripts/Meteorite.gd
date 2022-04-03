@@ -53,15 +53,15 @@ func _process(delta):
 		crash_into_earth(delta)
 	
 func crash_into_earth(delta):
-	if meteorite_earth_explosion_sprite.scale.x < 0.2:
-		meteorite_earth_explosion_sprite.scale.x += 0.2
+	if meteorite_earth_explosion_sprite.scale.x < 0.25:
+		meteorite_earth_explosion_sprite.scale.x += 0.25
 		meteorite_earth_explosion_sprite.scale.y = meteorite_earth_explosion_sprite.scale.x
 	
 	if scale.x > 0:
-		scale.x -= 0.1 * delta
+		scale.x -= 0.25 * delta
 		scale.y = scale.x
 		
-		meteorite_earth_explosion_sprite.scale.x += 0.1 * delta
+		meteorite_earth_explosion_sprite.scale.x += 0.25 * delta
 		meteorite_earth_explosion_sprite.scale.y = meteorite_earth_explosion_sprite.scale.x
 		
 	if scale.x < 0.1:

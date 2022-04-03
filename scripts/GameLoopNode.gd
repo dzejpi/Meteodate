@@ -213,7 +213,7 @@ func process_events(delta):
 				
 				trigger_event(3)
 				trigger_event(3)
-				trigger_event(3)
+				trigger_event(2)
 				trigger_event(3)
 				
 				current_event_number += 1
