@@ -68,9 +68,9 @@ func process_events(delta):
 				event_number = 1
 				dialog_number = 1
 				
-				#deciding_dialog = true
-				#first_choice = "2 New phone, who dis?"
-				#second_choice = "3 Not now, I have work to do"
+				deciding_dialog = true
+				first_choice = "2 New phone, who dis?"
+				second_choice = "3 Not now, I have work to do"
 
 				current_event_number += 1
 			2:
