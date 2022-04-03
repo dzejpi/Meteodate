@@ -107,7 +107,7 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				trigger_event(1)
+				trigger_event(2)
 				
 				current_event_number += 1
 			9:
@@ -133,7 +133,7 @@ func process_events(delta):
 			13:
 				dialog_number = current_event_number
 				
-				increase_funding(4)
+				increase_funding(5)
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -173,7 +173,7 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				increase_funding(10)
+				increase_funding(5)
 				
 				current_event_number += 1
 			21:
@@ -202,21 +202,21 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				trigger_event(1)
+				trigger_event(2)
 				
 				current_event_number += 1
 			26:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				trigger_event(2)
+				trigger_event(3)
 				
 				current_event_number += 1
 			27:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
-				trigger_event(7)
+				trigger_event(8)
 				
 				current_event_number += 1
 			28:
@@ -333,4 +333,4 @@ func trigger_event(event_number):
 
 
 func increase_funding(amount):
-	game_scene_root.label_total_funds += amount
+	game_scene_root.label_funding_gains += amount

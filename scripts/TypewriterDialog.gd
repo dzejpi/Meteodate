@@ -102,7 +102,8 @@ func process_dialog(delta):
 			dialog_timeout = 0
 			if currently_displayed_character < text_length_of_array:
 				currently_displayed_character += 1
-			
+				
+				
 			if currently_displayed_character == text_length_of_array:
 				if dialog_switch_timeout < dialog_switch_timeout_time:
 					dialog_switch_timeout += (letter_change_speed * delta)
