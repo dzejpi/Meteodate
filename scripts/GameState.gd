@@ -3,6 +3,7 @@ extends Node2D
 
 var stopping_speed = 0
 var play_sfx = false
+var days_survived = 0
 
 
 onready var sfx_node = $SfxNode

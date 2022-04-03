@@ -13,6 +13,5 @@ func _ready():
 
 func _process(delta):
 	if game_over_triggered:
-		days_survived_label.text = "Days survived: " + String(days_survived)
+		days_survived_label.text = "Days survived: " + String(GameState.days_survived)
 		visible = true
-

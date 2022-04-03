@@ -72,6 +72,7 @@ func process_day_count(delta):
 	else:
 		days_countdown = 0
 		days_survived += 1
+		GameState.days_survived = days_survived
 
 
 func process_funds(delta):
