@@ -38,3 +38,7 @@ func _physics_process(delta):
 
 func set_rotation(chute_direction):
 	rotation = chute_direction
+
+
+func _on_ChuteArea_body_entered(body):
+	pass # Replace with function body.

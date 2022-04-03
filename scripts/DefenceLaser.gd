@@ -10,6 +10,11 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var laser_rotation = 0
 
+var hit = false
+var hit_delay = 4
+var hit_time = 0
+
+onready var explosion_sprite = $ExplosionSprite
 onready var laser_sprite = $LaserSprite
 var fired_laser_sprite = load("res://assets/visual/game/defence_systems/defence_laser_fired.png") 
 
@@ -28,6 +33,16 @@ func _process(delta):
 		if !launched:
 			launched = true
 			laser_sprite.texture = fired_laser_sprite
+			
+	if hit:
+		laser_sprite.texture = null
+		if hit_time < hit_delay:
+			hit_time += delta
+			explosion_sprite.scale.x += 0.1 * delta
+			explosion_sprite.scale.y += 0.1 * delta
+			explosion_sprite.modulate.a -= 0.25 * delta
+		else:
+			pass
 
 
 func _physics_process(delta):
@@ -35,10 +50,18 @@ func _physics_process(delta):
 		velocity = velocity.rotated(rotation)
 		
 		position += velocity * delta
-		velocity = Vector2(speed, 0)
+		if !hit:
+			velocity = Vector2(speed, 0)
+		else:
+			velocity = Vector2(0, 0)
 		
 		move_and_slide(velocity * delta)
 
 
 func set_rotation(laser_direction):
 	rotation = laser_direction
+
+
+func _on_LaserArea_area_entered(area):
+	if (area.get_name() == "MeteoriteArea"):
+		hit = true

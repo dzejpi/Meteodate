@@ -15,7 +15,7 @@ var pixel_to_km = 42
 
 var label_distance = 30000
 
-var label_total_funds = 23
+var label_total_funds = 50
 var label_funding_gains = 2
 
 var meteorite_speed = 1.75

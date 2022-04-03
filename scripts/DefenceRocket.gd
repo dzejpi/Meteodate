@@ -38,3 +38,7 @@ func _physics_process(delta):
 
 func set_rotation(rocket_direction):
 	rotation = rocket_direction
+
+
+func _on_RocketArea_body_entered(body):
+	pass # Replace with function body.

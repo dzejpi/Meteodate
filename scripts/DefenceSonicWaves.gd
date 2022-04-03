@@ -38,3 +38,7 @@ func _physics_process(delta):
 
 func set_rotation(sonic_waves_direction):
 	rotation = sonic_waves_direction
+
+
+func _on_SonicWavesArea_body_entered(body):
+	pass # Replace with function body.
