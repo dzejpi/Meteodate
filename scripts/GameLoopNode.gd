@@ -2,6 +2,7 @@ extends Node
 
 
 var dialog_text_array = [""]
+var dialog_avatars_array = [0, 0]
 var initial_dialog_number = 0
 var dialog_number = 0
 
@@ -69,7 +70,9 @@ func process_events(delta):
 
 func display_dialog(dialog_number, delta):
 	dialog_text_array = dialog_manager.get_dialog(dialog_number)
+	dialog_avatars_array = dialog_manager.get_dialog_avatar(dialog_number)
 	typewriter_dialog_manager.dialog_text_array = dialog_text_array
+	typewriter_dialog_manager.dialog_character_avatars_array = dialog_avatars_array
 	typewriter_dialog_manager.processing_dialog = true
 	typewriter_dialog_manager.start_dialog(delta)
 

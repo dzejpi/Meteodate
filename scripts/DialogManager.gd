@@ -24,3 +24,17 @@ func get_dialog(dialog_number):
 			dialog_text = ["Third dialog.", "First part."]
 
 	return dialog_text
+
+
+func get_dialog_avatar(dialog_number):
+	var dialog_avatars = [1, 1]
+	
+	match(dialog_number):
+		1:
+			dialog_avatars = [1, 2]
+		2:
+			dialog_avatars = [3, 2]
+		3:
+			dialog_avatars = [3, 3]
+
+	return dialog_avatars

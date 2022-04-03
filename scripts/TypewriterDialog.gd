@@ -8,15 +8,22 @@ var dialog_timeout_time = 1
 var dialog_switch_timeout = 0
 var dialog_switch_timeout_time = 4
 var dialog_text_array = [""]
+var dialog_character_avatars_array = [0, 0]
 
 var displayed_dialog_array_number = 0
 var currently_displayed_character = 0
 var current_dialog = ""
+var current_avatar = 0
 
 var processing_dialog = false
 var text_fully_displayed = false
 
 onready var text_label = $TextBgSprite/TextLabel
+onready var character_avatar = $CharSprite/CharAvatarSprite
+
+var alien_texture = load("res://assets/visual/ui/dialogue/avatar_alien_circle.png")
+var noise_texture = load("res://assets/visual/ui/dialogue/avatar_noise_circle.png")
+var operator_texture = load("res://assets/visual/ui/dialogue/avatar_operator_circle.png")
 
 
 func _ready():
@@ -26,8 +33,10 @@ func _ready():
 func _process(delta):
 	if processing_dialog:
 		process_dialog(delta)
+		show_proper_avatar()
 	else:
 		visible = false
+		character_avatar.texture = null
 
 
 func start_dialog(delta):
@@ -75,3 +84,17 @@ func process_dialog(delta):
 		processing_dialog = false
 	else:
 		text_label.text = dialog_text_array[displayed_dialog_array_number].left(currently_displayed_character)
+		current_avatar = dialog_character_avatars_array[displayed_dialog_array_number]
+		show_proper_avatar()
+
+
+func show_proper_avatar():
+	match(current_avatar):
+		0:
+			character_avatar.texture = null
+		1:
+			character_avatar.texture = alien_texture
+		2:
+			character_avatar.texture = noise_texture
+		3:
+			character_avatar.texture = operator_texture
