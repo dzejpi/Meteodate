@@ -9,13 +9,16 @@ var initial_distance = 0
 var days_survived = 0
 var days_countdown = 0
 
+var meteorite_hit = false
+var stopping_speed = 0
+
 # One pixel is roughly 42 kilometres
 # Width of the Earth / 2 / 150 px
 var pixel_to_km = 42
 
 var label_distance = 30000
 
-var label_total_funds = 50
+var label_total_funds = 500
 var label_funding_gains = 2
 
 var meteorite_speed = 1.75
@@ -41,6 +44,10 @@ func _process(delta):
 	process_speeds_and_distances(delta)
 	process_funds(delta)
 	process_day_count(delta)
+	
+	if meteorite_hit:
+		meteorite_node.meteorite_speed -= stopping_speed
+		meteorite_hit = false
 
 
 func process_speeds_and_distances(delta):

@@ -10,6 +10,15 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var chute_rotation = 0
 
+var stopping_speed = 0.5
+
+var hit = false
+var hit_delay = 4
+var hit_time = 0
+
+onready var explosion_sprite = $ExplosionSprite
+onready var chute_sprite = $ChuteSprite
+
 
 func _ready():
 	set_physics_process(true)
@@ -25,13 +34,26 @@ func _process(delta):
 		if !launched:
 			launched = true
 
+	if hit:
+		chute_sprite.texture = null
+		if hit_time < hit_delay:
+			hit_time += delta
+			explosion_sprite.scale.x += 0.1 * delta
+			explosion_sprite.scale.y += 0.1 * delta
+			explosion_sprite.modulate.a -= 0.25 * delta
+		else:
+			pass
+
 
 func _physics_process(delta):
 	if launched:
 		velocity = velocity.rotated(rotation)
 		
 		position += velocity * delta
-		velocity = Vector2(speed, 0)
+		if !hit:
+			velocity = Vector2(speed, 0)
+		else:
+			velocity = Vector2(0, 0)
 		
 		move_and_slide(velocity * delta)
 
@@ -40,5 +62,6 @@ func set_rotation(chute_direction):
 	rotation = chute_direction
 
 
-func _on_ChuteArea_body_entered(body):
-	pass # Replace with function body.
+func _on_ChuteArea_area_entered(area):
+	if (area.get_name() == "MeteoriteArea"):
+		hit = true

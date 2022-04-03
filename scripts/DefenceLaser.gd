@@ -10,6 +10,8 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var laser_rotation = 0
 
+var stopping_speed = 0.2
+
 var hit = false
 var hit_delay = 4
 var hit_time = 0
