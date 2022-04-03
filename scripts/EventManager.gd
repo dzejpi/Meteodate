@@ -33,17 +33,17 @@ func trigger_event(new_event_number):
 		2:
 			increase_meteorite_speed(5)
 		3:
-			increase_meteorite_speed(10)
+			increase_meteorite_speed(7)
 		4: 
-			increase_meteorite_speed(20)
+			increase_meteorite_speed(10)
 		5:
 			decrease_meteorite_speed(2)
 		6:
 			decrease_meteorite_speed(5)
 		7:
-			decrease_meteorite_speed(10)
+			decrease_meteorite_speed(7)
 		8: 
-			decrease_meteorite_speed(20)
+			decrease_meteorite_speed(10)
 		
 
 

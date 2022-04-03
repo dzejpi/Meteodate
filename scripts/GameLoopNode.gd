@@ -24,6 +24,7 @@ onready var dialog_manager = $DialogManager
 onready var typewriter_dialog_manager = $"../TypewriterDialogManager/TypewriterDialog"
 
 onready var event_manager = $EventManager
+onready var game_scene_root = $"../"
 
 
 func _ready():
@@ -99,11 +100,14 @@ func process_events(delta):
 			7:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				increase_funding(2)
 				
 				current_event_number += 1
 			8:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				
+				trigger_event(1)
 				
 				current_event_number += 1
 			9:
@@ -128,6 +132,8 @@ func process_events(delta):
 				current_event_number += 1
 			13:
 				dialog_number = current_event_number
+				
+				increase_funding(4)
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -155,6 +161,8 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(1)
+				
 				current_event_number += 1
 			19:
 				dialog_number = current_event_number
@@ -164,6 +172,8 @@ func process_events(delta):
 			20:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				
+				increase_funding(10)
 				
 				current_event_number += 1
 			21:
@@ -179,6 +189,8 @@ func process_events(delta):
 			23:
 				dialog_number = current_event_number
 				
+				trigger_event(5)
+				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			24:
@@ -190,15 +202,21 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(1)
+				
 				current_event_number += 1
 			26:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(2)
+				
 				current_event_number += 1
 			27:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				
+				trigger_event(7)
 				
 				current_event_number += 1
 			28:
@@ -215,6 +233,8 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				increase_funding(15)
+				
 				current_event_number += 1
 			31:
 				dialog_number = current_event_number
@@ -225,6 +245,8 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(3)
+				
 				current_event_number += 1
 			33:
 				dialog_number = current_event_number
@@ -234,11 +256,15 @@ func process_events(delta):
 			34:
 				dialog_number = current_event_number
 				
+				trigger_event(1)
+				
 				current_event_number += 1
 				countdown_to_next_event = 1
 			35:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
+				
+				increase_funding(20)
 				
 				current_event_number += 1
 			36:
@@ -275,6 +301,8 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(1)
+				
 				current_event_number = 0
 
 
@@ -298,7 +326,11 @@ func display_dialog_with_choices(dialog_number, delta, first_choice, second_choi
 	typewriter_dialog_manager.dialog_character_avatars_array = dialog_avatars_array
 	typewriter_dialog_manager.processing_dialog = true
 	typewriter_dialog_manager.start_dialog(delta)
-	
+
 
 func trigger_event(event_number):
 	event_manager.trigger_event(event_number)
+
+
+func increase_funding(amount):
+	game_scene_root.label_total_funds += amount
