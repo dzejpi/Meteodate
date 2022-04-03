@@ -20,6 +20,8 @@ func _process(delta):
 
 
 func _on_RocketButton_pressed():
+	GameState.play_sound("select")
+	
 	if !disabled:
 		cursor_node.selected_defence_system = 1
 		cursor_node.placing_defence_system = true

@@ -33,6 +33,7 @@ func _process(delta):
 	if launch:
 		if !launched:
 			launched = true
+			GameState.play_sound("launch")
 
 	if hit:
 		sonic_waves_sprite.texture = null
@@ -66,6 +67,7 @@ func set_rotation(sonic_waves_direction):
 func _on_SonicWavesArea_area_entered(area):
 	if (area.get_name() == "MeteoriteArea"):
 		hit = true
+		GameState.play_sound("explosion")
 		decrease_meteorite_speed()
 
 

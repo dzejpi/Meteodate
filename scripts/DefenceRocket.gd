@@ -33,6 +33,7 @@ func _process(delta):
 	if launch:
 		if !launched:
 			launched = true
+			GameState.play_sound("launch")
 
 	if hit:
 		rocket_sprite.texture = null
@@ -66,6 +67,7 @@ func set_rotation(rocket_direction):
 func _on_RocketArea_area_entered(area):
 	if (area.get_name() == "MeteoriteArea"):
 		hit = true
+		GameState.play_sound("explosion")
 		decrease_meteorite_speed()
 
 

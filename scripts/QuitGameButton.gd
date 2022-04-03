@@ -23,4 +23,6 @@ func _process(delta):
 			get_tree().quit()
 
 func _on_QuitGameButton_pressed():
+	GameState.play_sound("select")
+	
 	button_pressed = true

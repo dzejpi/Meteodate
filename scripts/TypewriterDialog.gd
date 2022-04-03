@@ -154,12 +154,14 @@ func show_proper_avatar():
 
 
 func _on_LeftDecisionButton_pressed():
+	GameState.play_sound("select")
 	decision_made = true
 	first_decision_selected = true
 	processing_dialog = false
 
 
 func _on_RightDecisionButton_pressed():
+	GameState.play_sound("select")
 	decision_made = true
 	first_decision_selected = false
 	processing_dialog = false

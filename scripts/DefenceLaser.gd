@@ -35,6 +35,7 @@ func _process(delta):
 		if !launched:
 			launched = true
 			laser_sprite.texture = fired_laser_sprite
+			GameState.play_sound("laser")
 			
 	if hit:
 		laser_sprite.texture = null
@@ -69,6 +70,7 @@ func set_rotation(laser_direction):
 func _on_LaserArea_area_entered(area):
 	if (area.get_name() == "MeteoriteArea"):
 		hit = true
+		GameState.play_sound("explosion")
 		decrease_meteorite_speed()
 
 

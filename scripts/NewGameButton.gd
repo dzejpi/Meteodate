@@ -20,4 +20,6 @@ func _process(delta):
 
 
 func _on_NewGameButton_pressed():
+	GameState.play_sound("select")
 	button_pressed = true
+	

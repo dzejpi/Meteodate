@@ -21,6 +21,8 @@ func _process(delta):
 
 
 func _on_SonicWaves_pressed():
+	GameState.play_sound("select")
+	
 	if !disabled:
 		cursor_node.selected_defence_system = 3
 		cursor_node.placing_defence_system = true

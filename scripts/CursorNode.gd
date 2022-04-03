@@ -56,6 +56,7 @@ func _process(delta):
 			match selected_defence_system:
 				1:
 					var new_rocket = load("res://scenes/defence_scenes/DefenceRocket.tscn")
+					GameState.play_sound("buy")
 					var spawned_rocket = new_rocket.instance()
 					get_parent().add_child(spawned_rocket)
 					spawned_rocket.global_position = global_position
@@ -65,6 +66,7 @@ func _process(delta):
 					selected_defence_system = 0
 				2:
 					var new_laser = load("res://scenes/defence_scenes/DefenceLaser.tscn")
+					GameState.play_sound("buy")
 					var spawned_laser = new_laser.instance()
 					get_parent().add_child(spawned_laser)
 					spawned_laser.global_position = global_position
@@ -74,6 +76,7 @@ func _process(delta):
 					selected_defence_system = 0
 				3:
 					var new_sonic_wave = load("res://scenes/defence_scenes/DefenceSonicWaves.tscn")
+					GameState.play_sound("buy")
 					var spawned_sonic_wave = new_sonic_wave.instance()
 					get_parent().add_child(spawned_sonic_wave)
 					spawned_sonic_wave.global_position = global_position
@@ -83,6 +86,7 @@ func _process(delta):
 					selected_defence_system = 0
 				4:
 					var new_chute = load("res://scenes/defence_scenes/DefenceChute.tscn")
+					GameState.play_sound("buy")
 					var spawned_chute = new_chute.instance()
 					get_parent().add_child(spawned_chute)
 					spawned_chute.global_position = global_position

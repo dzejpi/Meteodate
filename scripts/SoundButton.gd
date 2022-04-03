@@ -28,6 +28,8 @@ func _process(delta):
 
 
 func _on_SoundButton_pressed():
+	GameState.play_sound("select")
+	
 	if sound_on:
 		sound_on = false
 		sound_label.text = "Sound: Off"

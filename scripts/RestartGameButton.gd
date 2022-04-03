@@ -21,4 +21,6 @@ func _process(delta):
 
 
 func _on_RestartGameButton_pressed():
+	GameState.play_sound("select")
+	
 	button_pressed = true
