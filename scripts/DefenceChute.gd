@@ -10,7 +10,7 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var chute_rotation = 0
 
-var stopping_speed = 5
+var stopping_speed = 3
 
 var hit = false
 var hit_delay = 4
