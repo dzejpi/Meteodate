@@ -67,3 +67,8 @@ func set_rotation(laser_direction):
 func _on_LaserArea_area_entered(area):
 	if (area.get_name() == "MeteoriteArea"):
 		hit = true
+		decrease_meteorite_speed()
+
+
+func decrease_meteorite_speed():
+	pass
