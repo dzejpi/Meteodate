@@ -73,7 +73,17 @@ func process_dialog(delta):
 		if currently_displayed_character < text_length_of_array:
 			currently_displayed_character = text_length_of_array
 		else:
-			displayed_dialog_array_number += 1
+			if decision_dialog:
+				if !decision_made:
+					if displayed_dialog_array_number == last_array_position:
+						currently_displayed_character = text_length_of_array
+					else:
+						displayed_dialog_array_number += 1
+				else:
+					displayed_dialog_array_number += 1
+			else:
+				displayed_dialog_array_number += 1
+						
 			if displayed_dialog_array_number > last_array_position:
 				if decision_dialog:
 					if decision_made:
@@ -95,7 +105,18 @@ func process_dialog(delta):
 					dialog_switch_timeout += (letter_change_speed * delta)
 				else:
 					dialog_switch_timeout = 0
-					displayed_dialog_array_number += 1
+					
+					if decision_dialog:
+						if !decision_made:
+							if displayed_dialog_array_number == last_array_position:
+								pass
+							else:
+								displayed_dialog_array_number += 1
+						else:
+							displayed_dialog_array_number += 1
+					else:
+						displayed_dialog_array_number += 1
+					
 					if displayed_dialog_array_number > last_array_position:
 						if decision_dialog:
 							if decision_made:

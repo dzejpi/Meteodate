@@ -6,6 +6,10 @@ var dialog_avatars_array = [0, 0]
 var initial_dialog_number = 0
 var dialog_number = 0
 
+var deciding_dialog = false
+var first_choice = "First choice"
+var second_choice = "Second choice"
+
 var initial_event_number = 0
 var event_number = 0
 
@@ -29,7 +33,10 @@ func _process(delta):
 	# Automatically display dialog if the dialog number changes
 	if initial_dialog_number != dialog_number:
 		initial_dialog_number = dialog_number
-		display_dialog(dialog_number, delta)
+		if !deciding_dialog:
+			display_dialog(dialog_number, delta)
+		else:
+			display_dialog_with_choices(dialog_number, delta, first_choice, second_choice)
 	
 	if initial_event_number != event_number:
 		initial_event_number = event_number
@@ -47,35 +54,52 @@ func process_game(delta):
 		
 		
 func process_events(delta):
-	match(current_event_number):
-		1:
-			event_number = 1
-			dialog_number = 1
-			current_event_number += 1
-			
-			countdown_to_next_event = 3
-		2:
-			event_number = 2
-			dialog_number = 2
-			current_event_number += 1
-			
-			countdown_to_next_event = 3
-		3:
-			event_number = 3
-			dialog_number = 3
-			current_event_number += 1
-			
-			countdown_to_next_event = 3
+	if !deciding_dialog:
+		match(current_event_number):
+			1:
+				event_number = 1
+				dialog_number = 1
+				
+				deciding_dialog = true
+				first_choice = "New phone, who dis?"
+				second_choice = "Not now, I have work to do"
+
+				#current_event_number += 1
+				
+				countdown_to_next_event = 3
+			2:
+				event_number = 2
+				dialog_number = 2
+				current_event_number += 1
+				
+				countdown_to_next_event = 3
+			3:
+				event_number = 3
+				dialog_number = 3
+				current_event_number += 1
+				
+				countdown_to_next_event = 3
 
 
 func display_dialog(dialog_number, delta):
 	dialog_text_array = dialog_manager.get_dialog(dialog_number)
 	dialog_avatars_array = dialog_manager.get_dialog_avatar(dialog_number)
+	typewriter_dialog_manager.decision_dialog = false
 	typewriter_dialog_manager.dialog_text_array = dialog_text_array
 	typewriter_dialog_manager.dialog_character_avatars_array = dialog_avatars_array
 	typewriter_dialog_manager.processing_dialog = true
 	typewriter_dialog_manager.start_dialog(delta)
 
+
+func display_dialog_with_choices(dialog_number, delta, first_choice, second_choice):
+	dialog_text_array = dialog_manager.get_dialog(dialog_number)
+	dialog_avatars_array = dialog_manager.get_dialog_avatar(dialog_number)
+	typewriter_dialog_manager.decision_dialog = true
+	typewriter_dialog_manager.dialog_text_array = dialog_text_array
+	typewriter_dialog_manager.dialog_character_avatars_array = dialog_avatars_array
+	typewriter_dialog_manager.processing_dialog = true
+	typewriter_dialog_manager.start_dialog(delta)
+	
 
 func trigger_event(event_number):
 	event_manager.trigger_event(event_number)
