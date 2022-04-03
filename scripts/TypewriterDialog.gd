@@ -18,8 +18,16 @@ var current_avatar = 0
 var processing_dialog = false
 var text_fully_displayed = false
 
+var decision_dialog = false
+var decision_made = false
+var first_decision = "Hell yea!"
+var second_decision = "Hell no!"
+
 onready var text_label = $TextBgSprite/TextLabel
 onready var character_avatar = $CharSprite/CharAvatarSprite
+onready var decision_node = $DecisionButtonNode
+onready var left_label = $DecisionButtonNode/LeftDecisionButton/LeftLabel
+onready var right_label = $DecisionButtonNode/RightDecisionButton/RightLabel
 
 var alien_texture = load("res://assets/visual/ui/dialogue/avatar_alien_circle.png")
 var noise_texture = load("res://assets/visual/ui/dialogue/avatar_noise_circle.png")
@@ -34,6 +42,15 @@ func _process(delta):
 	if processing_dialog:
 		process_dialog(delta)
 		show_proper_avatar()
+		if decision_dialog:
+			decision_node.visible = true
+			left_label.text = first_decision
+			right_label.text = second_decision
+			
+			if decision_made:
+				decision_node.visible = false
+		else:
+			decision_node.visible = false
 	else:
 		visible = false
 		character_avatar.texture = null
@@ -58,7 +75,11 @@ func process_dialog(delta):
 		else:
 			displayed_dialog_array_number += 1
 			if displayed_dialog_array_number > last_array_position:
-				processing_dialog = false
+				if decision_dialog:
+					if decision_made:
+						processing_dialog = false
+				else:
+					processing_dialog = false
 			else:
 				currently_displayed_character = 0
 	else:
@@ -76,12 +97,20 @@ func process_dialog(delta):
 					dialog_switch_timeout = 0
 					displayed_dialog_array_number += 1
 					if displayed_dialog_array_number > last_array_position:
-						processing_dialog = false
+						if decision_dialog:
+							if decision_made:
+								processing_dialog = false
+						else:
+							processing_dialog = false
 					else:
 						currently_displayed_character = 0
 	
 	if displayed_dialog_array_number > last_array_position:
-		processing_dialog = false
+		if decision_dialog:
+			if decision_made:
+				processing_dialog = false
+		else:
+				processing_dialog = false
 	else:
 		text_label.text = dialog_text_array[displayed_dialog_array_number].left(currently_displayed_character)
 		current_avatar = dialog_character_avatars_array[displayed_dialog_array_number]
