@@ -3,6 +3,11 @@ extends Node
 
 var dialog_number = 0
 
+# avatar 0: nothing
+# avatar 1: alien
+# avatar 2: noise
+# avatar 3: operator
+
 
 func _ready():
 	pass
@@ -17,7 +22,7 @@ func get_dialog(dialog_number):
 	
 	match(dialog_number):
 		1:
-			dialog_text = ["Hey. This is Nick from the operational.", "We have detected the meteorite aiming for the Earth.", "Not the fastest one. Can your department take care of it?", "You have enough funding for that. Thanks!"]
+			dialog_text = ["Hey. This is Nick from the operational.", "We have detected the meteorite aiming for the Earth.", "Not the fastest one. Can your department take care of it?", "You have enough funding for that. So just buy what you need. Thanks!"]
 			GameState.play_sound("new_message")
 		2:
 			dialog_text = ["RIRrTws4W2E4p22JeBS6ISvil8mH7ExtXPCgBPMARopBLHLy80xnDzJMGj6NRDmctX89QRHuXNoTQ6KmsB82EHoioaXd9FUdEXsNgN88YxYi53LTX0plXMbR57", "8mH7ExtXPCgBPMARopBLHLy80xnDzJMGj6NRDmctX89QRHuXNoTQ6KmsB82EHoioaXd9FUd"]
@@ -26,26 +31,37 @@ func get_dialog(dialog_number):
 			dialog_text = ["H 3lXo, c  4Rlhl  1NSs.  p0 A0u  _E 4.?", "H _1l o0,  eArt hL 1n __-s, do   yo u  re ad?", "The si gnal s hould be correct now."]
 			GameState.play_sound("new_message")
 		4:
-			dialog_text = ["Your planet is in our way to our new great project.", "Sorry about that.", "We have decided to delete your planet.", "As mentioned, we are sorry for that."]
+			dialog_text = ["Your planet got in our way to our new great project.", "Our corporation is truly sorry about that.", "There is no need for action from your side, everything is planned into the smallest details.", "Thank you for understanding and for your cooperation."]
 			GameState.play_sound("new_message")
 		5:
-			dialog_text = [""]
+			# Anything to offer?
+			dialog_text = ["We are sorry for the inconvenience.", "Feel free to leave us any feedback.", "We are taking every feedback extremely seriously."]
 		6:
-			dialog_text = [""]
+			# 5 -> Solution
+			dialog_text = ["Are you really certain that you have anything interesting to offer?", "Our corporation does not want to waste its valuable resources with uninteresting offers."]
+			GameState.play_sound("new_message")
 		7:
-			dialog_text = [""]
+			# 6 -> Love
+			dialog_text = ["Love? What do you mean love? We have conducted our research.", "It seems that love is just a chemical reaction in your brains.", "It does not bring any value for our corporation, we are afraid."]
+			GameState.play_sound("new_message")
 		8:
-			dialog_text = [""]
+			# 6 -> Money
+			dialog_text = ["Dear... Sir or Madam, we have run the numbers through and you can be assured that our project exceeds the whole Earth value.", "Since it appears to us that the valuable time is lost, we have prioritised the speed of the operation.", "Thank you for your understanding."]
+			GameState.play_sound("new_message")
 		9:
-			dialog_text = [""]
+			dialog_text = ["However, since our responsibility is to ensure the success of the mission,", "we can assign you the agent that will help you with all of your complaints and suggestions."]
+			GameState.play_sound("new_message")
 		10:
-			dialog_text = [""]
+			dialog_text = ["Hey, operations here.", "What the hell is goin g o no nnnn?"]
 		11:
-			dialog_text = [""]
+			# 10 -> What is your name?
+			dialog_text = ["Sorry for the interruption. It had been taken care of.", "Is there more that you want to talk about?"]
 		12:
-			dialog_text = [""]
+			# 10 -> Angry
+			dialog_text = ["We do not reason with the unreasonable.", "While we value the propositions of all, we cannot accept your demands.", "The speed of the operation was increased."]
 		13:
-			dialog_text = [""]
+			# 5 -> Angry
+			dialog_text = ["Our corporation does not appreciate this tone of your voice.", "We have prioritised our operations to exceed our deadline."]
 		14:
 			dialog_text = [""]
 		15:
@@ -119,7 +135,7 @@ func get_dialog(dialog_number):
 		49:
 			dialog_text = [""]
 		50:
-			dialog_text = [""]
+			dialog_text = ["Dear Sir or Madam", "We have noticed the unusual and unprofessional behavior of one of our employess.", "We want to assure you that the corrective measures were taken.", "Due to the unexpected delay in our operation, we are prioritizing our mission now.", "Have a wonderful day!"]
 		
 	return dialog_text
 
@@ -137,23 +153,23 @@ func get_dialog_avatar(dialog_number):
 		4:
 			dialog_avatars = [1, 1, 1, 1]
 		5:
-			dialog_avatars = [1]
+			dialog_avatars = [1, 1, 1]
 		6:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2]
 		7:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2, 2]
 		8:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2, 2]
 		9:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2]
 		10:
-			dialog_avatars = [1]
+			dialog_avatars = [3, 3]
 		11:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2]
 		12:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2, 2]
 		13:
-			dialog_avatars = [1]
+			dialog_avatars = [2, 2]
 		14:
 			dialog_avatars = [1]
 		15:

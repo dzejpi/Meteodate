@@ -67,31 +67,63 @@ func process_events(delta):
 			1:
 				event_number = 1
 				dialog_number = 1
+				countdown_to_next_event = 15
 				
-				deciding_dialog = true
-				first_choice = "2 New phone, who dis?"
-				second_choice = "3 Not now, I have work to do"
-
 				current_event_number += 1
 			2:
 				dialog_number = 2
+				
 				current_event_number += 1
-				countdown_to_next_event = 5
 			3:
 				dialog_number = 3
+				
 				current_event_number += 1
 				countdown_to_next_event = 5
 			4:
 				dialog_number = 4
 				
+				current_event_number += 1
+				countdown_to_next_event = 1
+			5:
+				dialog_number = 5
+				
 				deciding_dialog = true
-				first_choice = "What? Why?"
-				second_choice = "Really? Die, alien scum!"
+				first_choice = "Let's talk!"
+				second_choice = "Die, alien scum!"
+				
+				typewriter_dialog_manager.processing_dialog = true
+				blocked_by_decision = true
 				
 				current_event_number += 1
 				countdown_to_next_event = 5
-			5:
-				dialog_number = 3
+			6:
+				if first_choice_selected:
+					current_event_number += 1
+					countdown_to_next_event = 1
+				else:
+					dialog_number = 13
+					trigger_event(4)
+					# Game ends here
+					current_event_number = 0
+			7:
+				dialog_number = 6
+					
+				deciding_dialog = true
+					
+				first_choice = "Love"
+				second_choice = "Money"
+				
+				typewriter_dialog_manager.processing_dialog = true
+				blocked_by_decision = true
+				
+				current_event_number += 1
+				countdown_to_next_event = 5
+			8:
+				# both dialogs routed here:
+				if first_choice_selected:
+					dialog_number = 7
+				else:
+					dialog_number = 8
 
 
 func display_dialog(dialog_number, delta):
