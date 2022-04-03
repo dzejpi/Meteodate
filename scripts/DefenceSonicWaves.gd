@@ -10,7 +10,7 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var sonic_waves_rotation = 0
 
-var stopping_speed = 0.3
+var stopping_speed = 2
 
 var hit = false
 var hit_delay = 4
@@ -68,4 +68,4 @@ func _on_SonicWavesArea_area_entered(area):
 
 
 func decrease_meteorite_speed():
-	pass
+	GameState.stopping_speed = stopping_speed

@@ -21,7 +21,7 @@ var label_distance = 30000
 var label_total_funds = 500
 var label_funding_gains = 2
 
-var meteorite_speed = 1.75
+var meteorite_speed = 0.75
 var label_speed = meteorite_speed * pixel_to_km
 var new_meteorite_position = 0
 var previous_meteorite_position = 0
@@ -45,9 +45,9 @@ func _process(delta):
 	process_funds(delta)
 	process_day_count(delta)
 	
-	if meteorite_hit:
-		meteorite_node.meteorite_speed -= stopping_speed
-		meteorite_hit = false
+	if stopping_speed != GameState.stopping_speed:
+		stopping_speed = GameState.stopping_speed
+		meteorite_speed -= GameState.stopping_speed
 
 
 func process_speeds_and_distances(delta):

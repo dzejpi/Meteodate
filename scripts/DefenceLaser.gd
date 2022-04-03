@@ -10,7 +10,7 @@ var speed = 250
 var velocity = Vector2(-speed, 0)
 var laser_rotation = 0
 
-var stopping_speed = 0.2
+var stopping_speed = 1
 
 var hit = false
 var hit_delay = 4
@@ -71,4 +71,4 @@ func _on_LaserArea_area_entered(area):
 
 
 func decrease_meteorite_speed():
-	pass
+	GameState.stopping_speed = stopping_speed
