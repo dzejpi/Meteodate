@@ -11,6 +11,7 @@ onready var meteorite_shape = $MeteoriteShapeSprite
 onready var meteorite_burning_shape = $MeteoriteBurnShapeSprite
 onready var meteorite_tail_sprite = $MeteoriteTailSprite
 onready var meteorite_glowing_sprite = $MeteoriteShapeGlowingSprite
+onready var meteorite_earth_explosion_sprite = $"../EarthExplosionNode"
 onready var earth_node = $"../Earth"
 
 
@@ -19,12 +20,18 @@ func _ready():
 	meteorite_burning_shape.modulate.a = 0
 	meteorite_tail_sprite.modulate.a = 0
 	meteorite_glowing_sprite.modulate.a = 0
+	meteorite_earth_explosion_sprite.scale.x = 0
+	meteorite_earth_explosion_sprite.scale.y = meteorite_earth_explosion_sprite.scale.x
 
 
 func _process(delta):
 	self.position.x += meteorite_speed * delta
 	meteorite_shape.rotation += rotation_speed * delta
 	meteorite_glowing_sprite.rotation += rotation_speed * delta
+	
+	if !crashing_into_earth:
+		meteorite_earth_explosion_sprite.position.x = position.x
+		meteorite_earth_explosion_sprite.position.y = position.y
 	
 	if distance_left < 400:
 		if meteorite_burning_shape.modulate.a < 1:
@@ -46,9 +53,17 @@ func _process(delta):
 		crash_into_earth(delta)
 	
 func crash_into_earth(delta):
+	if meteorite_earth_explosion_sprite.scale.x < 0.2:
+		meteorite_earth_explosion_sprite.scale.x += 0.2
+		meteorite_earth_explosion_sprite.scale.y = meteorite_earth_explosion_sprite.scale.x
+	
 	if scale.x > 0:
 		scale.x -= 0.1 * delta
-		scale.y -= 0.1 * delta
+		scale.y = scale.x
+		
+		meteorite_earth_explosion_sprite.scale.x += 0.1 * delta
+		meteorite_earth_explosion_sprite.scale.y = meteorite_earth_explosion_sprite.scale.x
 		
 	if scale.x < 0.1:
 		earth_node.earth_impacted = true
+

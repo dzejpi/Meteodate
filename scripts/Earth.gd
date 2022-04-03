@@ -4,7 +4,7 @@ extends Node2D
 var earth_impacted = false
 var impact_started = false
 var game_over_countdown_current = 0
-var game_over_countdown = 5
+var game_over_countdown = 1
 var game_end_triggered = false
 
 onready var root_node = $"../../"

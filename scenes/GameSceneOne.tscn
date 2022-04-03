@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/PauseScene.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/TransitionOverlay.tscn" type="PackedScene" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://scripts/SolarChute.gd" type="Script" id=34]
 [ext_resource path="res://scripts/CursorNode.gd" type="Script" id=35]
 [ext_resource path="res://assets/visual/game/defence_systems/defence_rocket.png" type="Texture" id=36]
+[ext_resource path="res://assets/visual/game/meteorite/meteorite_earth_explosion.png" type="Texture" id=37]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 140.0
@@ -92,6 +93,12 @@ offset = Vector2( -82, 0 )
 position = Vector2( -1, 0 )
 texture = ExtResource( 15 )
 offset = Vector2( -82, 0 )
+
+[node name="EarthExplosionNode" type="Node2D" parent="GameNode"]
+position = Vector2( 48, 360 )
+
+[node name="MeteoriteCrashExplosion" type="Sprite" parent="GameNode/EarthExplosionNode"]
+texture = ExtResource( 37 )
 
 [node name="CursorNode" type="Node2D" parent="GameNode"]
 script = ExtResource( 35 )
