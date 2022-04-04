@@ -100,7 +100,7 @@ func process_events(delta):
 			7:
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
-				increase_funding(2)
+				increase_funding(3)
 				
 				current_event_number += 1
 			8:
@@ -263,7 +263,9 @@ func process_events(delta):
 			34:
 				dialog_number = current_event_number
 				
-				trigger_event(1)
+				trigger_event(3)
+				trigger_event(3)
+				trigger_event(3)
 				
 				current_event_number += 1
 				countdown_to_next_event = 1
@@ -308,6 +310,9 @@ func process_events(delta):
 				dialog_number = current_event_number
 				countdown_to_next_event = 5
 				
+				trigger_event(3)
+				trigger_event(3)
+				trigger_event(3)
 				trigger_event(3)
 				trigger_event(3)
 				trigger_event(3)
